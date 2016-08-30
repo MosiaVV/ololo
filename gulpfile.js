@@ -4,6 +4,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var nunjucks = require('gulp-nunjucks-render');
+const imagemin = require('gulp-imagemin');
 
 gulp.task('sass', function () {
     return gulp.src('src/sass/*.{scss,sass}')
@@ -29,9 +30,20 @@ gulp.task('nunjucks:watch', function () {
     gulp.watch('src/*.html', ['nunjucks']);
 });
 
+gulp.task('imagemin', () =>
+gulp.src('src/img/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('build/img'))
+);
+
+gulp.task('imagemin:watch', function () {
+    gulp.watch('src/img/*', ['imagemin']);
+});
+
 gulp.task('watch',
     [
         'sass:watch',
-        'nunjucks:watch'
+        'nunjucks:watch',
+        'imagemin:watch'
     ]
 );
