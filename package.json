@@ -8,6 +8,7 @@
     "gulp-sass": "^2.3.2"
   },
   "devDependencies": {
+    "gulp-imagemin": "^3.0.3",
     "gulp-nunjucks-html": "^2.0.0",
     "gulp-nunjucks-render": "^2.0.0",
     "gulp-sass": "^2.3.2"
