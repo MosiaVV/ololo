@@ -29,11 +29,32 @@ gulp.task('sass:watch', function () {
 gulp.task('nunjucks:watch', function () {
     gulp.watch('src/*.html', ['nunjucks']);
 });
-
-gulp.task('imagemin', () =>
-gulp.src('src/img/*')
+//minify pic
+gulp.task('imagemin-pic', () =>
+gulp.src('src/pic/*.{jpg,png}')
     .pipe(imagemin())
-    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('build/pic'))
+);
+
+gulp.task('imagemin-pic:watch', function () {
+    gulp.watch('src/pic/*.{jpg,png}', ['imagemin-pic']);
+});
+
+//minify svg
+gulp.task('minify-svg', function () {
+    return gulp.src('src/pic/**/*.svg')
+        .pipe(svgmin())
+        .pipe(gulp.dest('build/pic'));
+});
+
+gulp.task('minify-svg:watch', function () {
+    gulp.watch('src/pic/**/*.svg', ['minify-svg']);
+});
+//minify img
+gulp.task('imagemin', () =>
+    gulp.src('src/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('build/img'))
 );
 
 gulp.task('imagemin:watch', function () {
@@ -44,6 +65,8 @@ gulp.task('watch',
     [
         'sass:watch',
         'nunjucks:watch',
-        'imagemin:watch'
+        'imagemin:watch',
+        'imagemin-pic:watch',
+        'minify-svg:watch',
     ]
 );
