@@ -8,7 +8,6 @@ gulp.task('build',
         'sass',
         'nunjucks',
         'imagemin',
-        'imagemin-pic',
-        'minify-svg'
+        'imagemin-pic'
     ]
 );
