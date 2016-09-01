@@ -5,10 +5,15 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var nunjucks = require('gulp-nunjucks-render');
 const imagemin = require('gulp-imagemin');
+const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function () {
     return gulp.src('src/sass/*.{scss,sass}')
         .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: ['last 10 versions'],
+            cascade: false
+        }))
         .pipe(gulp.dest('build/css'));
 });
 
@@ -64,9 +69,16 @@ gulp.task('imagemin:watch', function () {
 gulp.task('watch',
     [
         'sass:watch',
-        'nunjucks:watch',
-        'imagemin:watch',
-        'imagemin-pic:watch',
-        'minify-svg:watch',
+        'nunjucks:watch'
+    ]
+);
+
+gulp.task('build',
+    [
+        'sass',
+        'nunjucks',
+        'imagemin',
+        'imagemin-pic',
+        'minify-svg'
     ]
 );
