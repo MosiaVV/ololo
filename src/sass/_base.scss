@@ -30,10 +30,14 @@ section {
   color: #2c3e50;
   font-weight: 700;
   position: relative;
+  padding-bottom: 32px;
+}
+
+.subtitle {
+  padding-bottom: 0;
 }
 
 .title-icon {
-  padding-top: 32px;
   margin: 0 auto;
   width: 45px;
   background-color: #ffffff;
@@ -64,7 +68,7 @@ section {
   height: 9.5px;
   transform: rotate(45deg);
   position: absolute;
-  top: calc(100% + 18px);
+  top: calc(100% + 2px);
   left: calc(50% + 2px);
   z-index: 1;
 }
