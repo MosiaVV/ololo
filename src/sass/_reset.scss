@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+html, body, div, h1, h2, h3, p, b, i, strong, em, strike, sub, sup, ul, ol, li,
+blockquote, form, input, textarea, select, button, td, tr, th, table, span,
+header, footer, article, aside, nav, section, hgroup  {
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  border: none;
+}
+
+header, footer, article, aside, nav, section, hgroup { display: block; }
+
+html { overflow-y:  scroll; }
+
+body {
+  background: #fff;
+  overflow: hidden;
+}
+
+img {
+  border:  none;
+  outline:  none;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+a:visited,
+a:active {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li { padding-left: 0; }
+
+ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+nav ol, nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+input,
+select,
+textarea {
+  display: block;
+  border:  1px solid #000000;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-family: serif;
+  vertical-align: top;
+  box-sizing:  border-box;
+  outline: none;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  resize: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+table, td {
+  border-collapse: collapse;
+  border-spacing: none;
+}
