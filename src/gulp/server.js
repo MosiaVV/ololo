@@ -2,17 +2,7 @@
  * Created by air on 01.09.16.
  */
 var gulp = require('gulp');
-var webserver = require('gulp-webserver');
 connect = require('gulp-connect');
-
-gulp.task('webserver', function() {
-    gulp.src('app')
-        .pipe(webserver({
-            livereload: true,
-            directoryListing: true,
-            open: true
-        }));
-});
 
 gulp.task('connect', function() {
     connect.server({

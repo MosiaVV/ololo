@@ -6,6 +6,7 @@ var gulp = require('gulp');
 gulp.task('watch',
     [
         'sass:watch',
-        'nunjucks:watch'
+        'nunjucks:watch',
+        'connect'
     ]
 );

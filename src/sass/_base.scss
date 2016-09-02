@@ -1,0 +1,29 @@
+div {
+  float: left;
+  margin-top: 10px;
+  background: linear-gradient(to left, red , yellow);
+  margin-bottom: calc(20% - 45px);
+}
+p {
+  text-align: left;
+}
+
+h1 {
+  font-family: Arial;
+}
+
+p {
+  color: red;
+}
+
+@media screen and (min-width: 769px) {
+  .foo::before {
+    content: "foo on medium";
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .bar::before {
+    content: "bar on medium";
+  }
+}
