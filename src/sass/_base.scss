@@ -1,7 +1,7 @@
 body {
   font-size: 14px;
   color: #282828;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
 
@@ -10,7 +10,7 @@ section {
 }
 
 .container {
-  min-width: 1170px;
+  max-width: 1170px;
   width: 97.44%;
   padding:0 1.28%;
   text-align: center;
@@ -29,6 +29,49 @@ section {
   text-transform: uppercase;
   color: #2c3e50;
   font-weight: 700;
+  position: relative;
+}
+
+.title-icon {
+  padding-top: 32px;
+  margin: 0 auto;
+  width: 45px;
+  background-color: #ffffff;
+  height: 13px;
+  display: block;
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 50%;
+    width: 34px;
+    height: 1px;
+    background-color: #e1e1e1;
+    display: block;
+    content: '';
+    right: -34px;
+  }
+  &::before {
+    @extend .title-icon::after;
+    right: 100%;
+  }
+}
+
+.title::after {
+  display: block;
+  content: '';
+  background-color: #e1e1e1;
+  width: 9.5px;
+  height: 9.5px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: calc(100% + 18px);
+  left: calc(50% + 2px);
+  z-index: 1;
+}
+
+.title::before {
+  left: calc(50% - 12px);
+  @extend .title::after;
 }
 
 .title--white, .subtitle--white {
