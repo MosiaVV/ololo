@@ -2,14 +2,14 @@
 
 html, body, div, h1, h2, h3, p, b, i, strong, em, strike, sub, sup, ul, ol, li,
 blockquote, form, input, textarea, select, button, td, tr, th, table, span,
-header, footer, article, aside, nav, section, hgroup  {
+header, footer, article, aside, nav, section  {
   padding: 0;
   margin: 0;
   vertical-align: baseline;
   border: none;
 }
 
-header, footer, article, aside, nav, section, hgroup { display: block; }
+header, footer, article, aside, nav, section { display: block; }
 
 html { overflow-y:  scroll; }
 
