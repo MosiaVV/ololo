@@ -3,9 +3,13 @@
  */
 var gulp = require('gulp');
 var nunjucks = require('gulp-nunjucks-render');
+var data = require('gulp-data');
 
 gulp.task('nunjucks', function() {
     return gulp.src('src/*.html')
+        .pipe(data(function() {
+            return require('../app/data.json')
+        }))
         .pipe(nunjucks(
             {
                 path: ['src/'] // String or Array
