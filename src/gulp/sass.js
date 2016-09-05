@@ -14,10 +14,10 @@ var processors = [
 ];
 
 gulp.task('sass', function () {
-    return gulp.src('src/sass/*.{scss,sass}')
+    return gulp.src('src/sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
-            browsers: ['last 10 versions'],
+            browsers: ['last 4 versions'],
             cascade: false
         }))
         .pipe(postcss(processors))
@@ -25,8 +25,9 @@ gulp.task('sass', function () {
 });
 
 gulp.task('sass:watch', function () {
-    gulp.watch('src/sass/*.{scss,sass}');
+    gulp.watch('src/sass/**/*.scss', ['sass']);
 });
+
 
 function isMax(mq) {
     return /max-width/.test(mq);

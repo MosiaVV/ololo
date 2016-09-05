@@ -5,15 +5,15 @@ var gulp = require('gulp');
 var nunjucks = require('gulp-nunjucks-render');
 
 gulp.task('nunjucks', function() {
-    return gulp.src('src/*.html')
+    return gulp.src('src/**/*.html')
         .pipe(nunjucks(
             {
-                path: ['src/'] // String or Array
+                path: ['src/']
             }
         ))
         .pipe(gulp.dest('build/'));
 });
 
 gulp.task('nunjucks:watch', function () {
-    gulp.watch('src/*.html', ['nunjucks']);
+    gulp.watch('src/**/*.html', ['nunjucks']);
 });
