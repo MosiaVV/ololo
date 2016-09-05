@@ -1,14 +1,23 @@
+{% from "parts/macro.html" import ResumeStep %}
+
 <section id="resume" class="section">
     <div class="wrap">
         <div class="container">
             <h2 class="title">about me</h2>
             <span class="title-icon"></span>
-            <div class="resume__content">
-                <h3 class="subtitle">Education</h3>
-                <div class="resume__steps">
-                    <div class="resume__steps__item">
-                    </div>
-                </div>
+            <div class="resume-content">
+                {{ ResumeStep
+                ('Education',
+                'Secondary school certificate',
+                'Salimganj A R school, Dhaka, BD',
+                'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.',
+                '2004 - 2010') }}
+
+                {{ ResumeStep('',
+                'Secondary school certificate',
+                'Salimganj A R school, Dhaka, BD',
+                'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.',
+                '2004 - 2010') }}
             </div>
         </div>
     </div>
