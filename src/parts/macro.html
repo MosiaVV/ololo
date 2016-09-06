@@ -1,15 +1,12 @@
-{% macro ResumeStep(subtitle='', name='', place='', text='', data='') %}
-<h3 class="subtitle">{{ subtitle }}</h3>
-<div class="resume__steps">
-    <div class="resume__steps__item">
-        <div class="resume__steps__item__description">
-            <p class="resume__steps__item__description-name">{{ name }}</p>
-            <p class="resume__steps__item__description-place">{{ place }}</p>
-            <p class="resume__steps__item__description-text">{{ text }}</p>
-        </div>
-        <div class="resume__steps__item__data">
-            <p>{{ data }}</p>
-        </div>
+{% macro ResumeStep(name='{{ step.name }}', place='{{ step.place }}', text='{{ step.text }}', data='{{ step.data }}', odd='{{ step.odd }}') %}
+<div class="resume__steps__item {{ odd }}">
+    <div class="resume__steps__item__description">
+        <p class="resume__steps__item__description-name">{{ name }}</p>
+        <p class="resume__steps__item__description-place">{{ place }}</p>
+        <p class="resume__steps__item__description-text">{{ text }}</p>
+    </div>
+    <div class="resume__steps__item__data">
+        <p>{{ data }}</p>
     </div>
 </div>
 {% endmacro %}
