@@ -1,0 +1,44 @@
+{
+  "Leaderships": [
+    {
+      "number": 80,
+      "name": "Leadership"
+    },
+    {
+      "number": 80
+    },
+    {
+      "number": 80
+    },
+    {
+      "number": 80
+    },
+    {
+      "number": 80
+    },
+    {
+      "number": 80
+    }
+  ],
+
+  "Skills": [
+    {
+      "number": 95
+    },
+    {
+      "number": 50
+    },
+    {
+      "number": 40
+    },
+    {
+      "number": 60
+    },
+    {
+      "number": 75
+    },
+    {
+      "number": 85
+    }
+  ]
+}
