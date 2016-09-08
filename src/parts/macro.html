@@ -1,7 +1,7 @@
-{% macro ResumeStep(name='{{ step.name }}', place='{{ step.place }}', text='{{ step.text }}', data='{{ step.data }}', odd='{{ step.odd }}') %}
+{% macro ResumeStep(name='', place='', text='', data='', odd='') %}
 <div class="resume__steps__item {{ odd }}">
     <div class="resume__steps__item__description">
-        <p class="resume__steps__item__description-name">{{ name }}</p>
+        <p class="resume__steps__item__description-name">{{ ame }}</p>
         <p class="resume__steps__item__description-place">{{ place }}</p>
         <p class="resume__steps__item__description-text">{{ text }}</p>
     </div>

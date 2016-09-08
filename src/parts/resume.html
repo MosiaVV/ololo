@@ -1,28 +1,20 @@
 {% from "parts/macro.html" import ResumeStep %}
 
-{% set resumesteps = [
+{% set steps = [
     {
-        name: 'Secondary school certificate',
-        place: 'Salimganj A R school, Dhaka, BD',
-        text: 'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.'
-        data: '2004 - 2010',
-        odd: 'odd'
+    name: 'Secondary',
+    place: 'Salimganj ',
+    text: 'I am alone, and fine',
+    data: '2004 - 2010',
+    odd: 'odd'
     },
     {
-        name: 'Secondary school certificate',
-        place: 'Salimganj A R school, Dhaka, BD',
-        text: 'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.'
-        data: '2004 - 2010',
-        odd: ''
-    },
-    {
-        name: 'Secondary school certificate',
-        place: 'Salimganj A R school, Dhaka, BD',
-        text: 'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.'
-        data: '2004 - 2010',
-        odd: 'odd'
-    }
-] %}
+    name: 'Secondary',
+    place: 'Salimganj ',
+    text: 'I am alone, and fine',
+    data: '2004 - 2010'
+    } ]
+%}
 
 <section id="resume" class="section">
     <div class="wrap">
@@ -32,8 +24,8 @@
             <div class="resume-content">
                 <h3 class="subtitle">Education</h3>
                 <div class="resume__steps">
-                    {% for step in resumesteps %}
-                        {{ ResumeStep }}
+                    {% for step in steps %}
+                      {{ ResumeStep }}
                     {% endfor %}
                 </div>
             </div>

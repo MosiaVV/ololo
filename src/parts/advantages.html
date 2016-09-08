@@ -1,0 +1,35 @@
+{% set advantages = [
+    {
+        icon: '',
+        quantity: '07',
+        name: ' years Experience'
+    },
+    {
+        icon: '',
+        quantity: '651',
+        name: 'projects done'
+    },
+    {
+        icon: '',
+        quantity: '251',
+        name: 'projects done'
+    },
+    {
+        icon: '',
+        quantity: '05',
+        name: 'awards won'
+    }
+] %}
+
+
+<section id="advantages" class="section">
+    <div class="wrap">
+        <div class="container">
+            <ul>
+                {% for advantage in advantages %}
+                    {% include "../blocks/advantage_block.html" %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
