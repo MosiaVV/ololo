@@ -1,4 +1,4 @@
-.show-menu {
+.show-menu, #show-menu {
   display: none;
 }
 
@@ -14,11 +14,13 @@ nav {
   max-width: 1170px;
   width: 97.44%;
   padding:0 1.28%;
+  font-style: 0;
 }
 
 .nav-list__item {
   display: inline-block;
   padding:30px 15px;
+  font-style: 14px;
 }
 
 .nav-list__item:hover {
@@ -41,7 +43,11 @@ nav {
     color: #ffffff;
   };
 }
-
+.show-menu {
+  @include respond-to(mobile) {
+    display: block;
+  }
+}
 .mobile-menu .lines {
   @include respond-to(mobile) {
     border-bottom: 15px double #f8f8f8;
