@@ -14,13 +14,14 @@ nav {
   max-width: 1170px;
   width: 97.44%;
   padding:0 1.28%;
-  font-style: 0;
+  font-size: 0;
 }
 
 .nav-list__item {
   display: inline-block;
   padding:30px 15px;
-  font-style: 14px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .nav-list__item:hover {
