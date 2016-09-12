@@ -1,3 +1,9 @@
+{% macro Menu(item) %}
+    <li class="menu_item">
+        <a href="#{{ item.id }}">{{ item.title }}</a>
+    </li>
+{{% endmacro %}}
+
 {% macro ResumeStep(item) %}
 <div class="resume__steps__item clearfix {{ item.even }}">
     <div class="resume__steps__item__description">

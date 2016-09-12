@@ -1,7 +1,13 @@
 {% extends "templates/root.html" %}
 
 {% block header %}
-    i am header
+    <nav>
+        <ul class="menu">
+            {% for menuItem in Menu %}
+                {{ Menu(menuItem) }}
+            {% endfor %}
+        </ul>
+    </nav>
 {% endblock %}
 
 {% block main %}
