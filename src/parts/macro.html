@@ -11,9 +11,9 @@
 
 {% macro AdvantageItem(item) %}
 <li class="advantages__item">
-    <img src="{{ advantage.icon }}" alt=""  class="advantages__item__img">
-    <p class="advantages__item__quantity">{{ item.quantity }}</p>
-    <p class="advantages__item__name">{{ item.name }}</p>
+    <figure class="advantages__item__img"></figure>
+    <p class="advantages__item__quantity b">{{ item.quantity }}</p>
+    <p class="advantages__item__name b">{{ item.name }}</p>
 </li>
 {% endmacro %}
 
@@ -24,10 +24,10 @@
         <p>{{ item.tags }}</p>
         <p>{{ item.title }}</p>
         <div class="blog_item__content__fitures">
-            <p>{{ item.author }}</p>
-            <p>{{ item.day }}</p>
-            <p>{{ item.share }}</p>
-            <p>{{ item.comment }}</p>
+            <p class="blog_item__author">{{ item.author }}</p>
+            <p class="blog_item__day">{{ item.day }}</p>
+            <p class="blog_item__share">{{ item.share }}</p>
+            <p class="blog_item__comment">{{ item.comment }}</p>
         </div>
     </div>
 </article>
