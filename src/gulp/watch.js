@@ -19,7 +19,9 @@ gulp.task('watch',
     ]
 );
 
-gulp.task('watchreload', ['browserSync', 'sass:watch', 'nunjucks:watch'], function (){
+gulp.task('watchreload', ['browserSync', 'sass:watch', 'nunjucks:watch', 'imagemin:watch'], function (){
     gulp.watch('build/css/*.css', browserSync.reload);
     gulp.watch('build/*.html', browserSync.reload);
+    gulp.watch('build/img/*', browserSync.reload);
+    gulp.watch('build/pic/*', browserSync.reload);
 });

@@ -1,2 +1,121 @@
+.resume-content {
+  padding-top: 44px;
+}
 
+.resume-subtitle {
+  padding-bottom: 17px;
+}
 
+.resume__steps__item__data {
+  float: right;
+  margin-right: 50%;
+  transform: translateX(50%);
+  color: $secondcolor;
+  margin-top:39px;
+  vertical-align: top;
+  background-color: #ffffff;
+  padding:3px 0;
+}
+
+.resume__steps__item__description {
+  float: left;
+  padding: 2.56% 2.307% 2.99% 2.735%;
+  border: 1px solid #eeeeee;
+  width:calc(37% - 6px);
+  position: relative;
+  text-align: left;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    transform: rotate(45deg);
+    top:45px;
+    right:-6px;
+    background-color: #ffffff;
+  }
+}
+
+.resume__steps {
+  position: relative;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width:10px;
+    height:10px;
+    background-color: #e1e1e1;
+    transform: rotate(45deg);
+    top: 0;
+    left:calc(50% - 5px);
+  };
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width:10px;
+    height:10px;
+    background-color: #e1e1e1;
+    transform: rotate(45deg);
+    bottom: 0;
+    left:calc(50% - 5px);
+  };
+  .resume__steps__item {
+    height: 100%;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      top:0;
+      left: calc(50% - 1.5px);
+      background-color: #e1e1e1;
+      width:3px;
+    };
+  };
+}
+
+.even {
+  .resume__steps__item__data {
+    float: left;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-right: 0;
+  };
+  .resume__steps__item__description {
+    float: right;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-top: 1px solid transparent;
+      border-right: 1px solid transparent;
+      border-bottom: 1px solid #eeeeee;
+      border-left: 1px solid #eeeeee;
+      transform: rotate(45deg);
+      top: 45px;
+      left: -6px;
+      background-color: #ffffff;
+    };
+  };
+}
+
+.resume__steps__item__description-name {
+  font-size: 1.4em;
+}
+
+.resume__steps__item__description-place {
+  color: $secondcolor;
+  padding:1em 0 2em;
+}
+
+.resume__steps__item__description-text {
+  line-height: 2em;
+}

@@ -1,0 +1,36 @@
+{% from "parts/macro.html" import AdvantageItem %}
+{% set advantages = [
+    {
+        icon: 'pic/advantages_experience.png',
+        quantity: '07',
+        name: ' years Experience'
+    },
+    {
+        icon: '../pic/advantages_projects.png',
+        quantity: '651',
+        name: 'projects done'
+    },
+    {
+        icon: '../pic/advantages_clients.png',
+        quantity: '251',
+        name: 'happy clients'
+    },
+    {
+        icon: 'pic/advantages_awards.png',
+        quantity: '05',
+        name: 'awards won'
+    }
+] %}
+
+
+<section id="advantages" class="section">
+    <div class="wrap">
+        <div class="container">
+            <ul>
+                {% for advantage in advantages %}
+                 {{ AdvantageItem(advantage) }}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>

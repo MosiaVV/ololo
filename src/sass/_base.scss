@@ -40,7 +40,6 @@ section {
 .title-icon {
   margin: 0 auto;
   width: 45px;
-  background-color: #ffffff;
   height: 13px;
   display: block;
   position: relative;
@@ -86,10 +85,15 @@ section {
   font-size: 1.714em;
 }
 
-b, strong {
+.b, b, strong {
   font-weight: 700;
 }
 
-i, em {
+.i, i, em {
   font-style: italic;
 }
+$maincolor: #68c3a3;
+$secondcolor: #2c3e50;
+$thirdcolor: #eeeeee;
+$fourthcolor: #282828;
+$fifthcolor: #afafaf;
