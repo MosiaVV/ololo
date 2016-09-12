@@ -1,3 +1,7 @@
+.show-menu {
+  display: none;
+}
+
 nav {
   background-color: #ffffff;
   border-bottom:1px solid #eeeeee;
@@ -36,4 +40,37 @@ nav {
   a {
     color: #ffffff;
   };
+}
+
+.mobile-menu .lines {
+  @include respond-to(mobile) {
+    border-bottom: 15px double #f8f8f8;
+    border-top: 5px solid #f8f8f8;
+    content:"";
+    height: 5px;
+    width:20px;
+    padding-right:15px;
+    float: right;
+  }
+}
+.mobile-menu ul {
+  @include respond-to(mobile) {
+    position: static;
+    display: none;
+  }
+}
+.mobile-menu li {
+  @include respond-to(mobile) {
+    margin-bottom: 1px;
+  }
+}
+.mobile-menu ul li, .mobile-menu li a {
+  @include respond-to(mobile) {
+    width: 100%;
+  }
+}
+.mobile-menu .show-menu {
+  @include respond-to(mobile) {
+    display:block;
+  }
 }
