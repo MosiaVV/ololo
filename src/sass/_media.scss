@@ -1,0 +1,68 @@
+// Mixins.
+
+@mixin nl {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style: none;
+  list-style-position: outside;
+}
+
+@mixin cf {
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .lt-ie8 & {
+    zoom: 1;
+  }
+}
+
+@mixin blocks-justify {
+  text-align: justify;
+  text-justify: newspaper;
+}
+
+$break-small: 767px;
+$break-large: 768px;
+$break-large-right: 1280px;
+$break-large-desktop:1600px;
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $break-small) {
+      @content;
+    }
+  } @else if $media == tablet {
+    @media only screen and (min-width: $break-large) and (max-width: $break-large-right - 1) {
+      @content;
+    }
+  } @else if $media == tablet-portrait {
+    @media only screen and (min-width: $break-large) and (max-width: $break-large-right) and (orientation: portrait) {
+      @content;
+    }
+  } @else if $media == tablet-and-mobile {
+    @media only screen and (max-width: $break-large-right) {
+      @content;
+    }
+  } @else if $media == desktop-large {
+    @media only screen and (min-width: $break-large-desktop) {
+      @content;
+    }
+  } @else if $media == from-tablet {
+    @media only screen and (min-width: $break-large) {
+      @content;
+    }
+  } @else if $media == from-desktop {
+    @media only screen and (min-width: $break-large-right) {
+      @content;
+    }
+  }
+}
+
+// You can add your own mixins here:

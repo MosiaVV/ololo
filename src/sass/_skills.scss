@@ -16,11 +16,13 @@
   text-transform: uppercase;
   position: relative;
   padding-bottom: 30px;
+  @include respond-to(mobile) {
+    padding-bottom: 20px;
+  }
   &:before {
     position: absolute;
     display: block;
     content: "";
-    background: url('../img/svg/skills-l-svg.svg');
     left: 0;
     bottom: 0;
   }
@@ -28,7 +30,6 @@
     position: absolute;
     display: block;
     content: "";
-    background: url('../img/svg/skills-r-svg.svg');
     right: 0;
     bottom: 0;
   }

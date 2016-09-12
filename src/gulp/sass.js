@@ -6,6 +6,7 @@ var sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 var postcss      = require('gulp-postcss');
 var mqpacker = require("css-mqpacker");
+var csso = require('gulp-csso');
 
 var processors = [
     mqpacker({
@@ -21,6 +22,11 @@ gulp.task('sass', function () {
             cascade: false
         }))
         .pipe(postcss(processors))
+        .pipe(csso({
+            restructure: false,
+            sourceMap: true,
+            debug: true
+        }))
         .pipe(gulp.dest('build/css'));
 });
 

@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>MON JA CAI - User interface Designer</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css"/>
+{% extends "templates/root.html" %}
 
-</head>
-<body>
+{% block header %}
+    i am header
+{% endblock %}
+
+{% block main %}
     {% include "parts/main.html" %}
     {% include "parts/resume.html" %}
     {% include "parts/skills.html" %}
     {% include "parts/advantages.html" %}
     {% include "parts/blog.html" %}
-</body>
-</html>
+{% endblock %}
+
+{% block footer %}
+    i am footer
+{% endblock %}
+
