@@ -1,21 +1,22 @@
+{% from "parts/macro.html" import AdvantageItem %}
 {% set advantages = [
     {
-        icon: '',
+        icon: '../pic/advantages_experience.svg',
         quantity: '07',
         name: ' years Experience'
     },
     {
-        icon: '',
+        icon: '../pic/advantages_projects.svg',
         quantity: '651',
         name: 'projects done'
     },
     {
-        icon: '',
+        icon: '../pic/advantages_clients.svg',
         quantity: '251',
-        name: 'projects done'
+        name: 'happy clients'
     },
     {
-        icon: '',
+        icon: '../pic/advantages_awards.png',
         quantity: '05',
         name: 'awards won'
     }
@@ -27,7 +28,7 @@
         <div class="container">
             <ul>
                 {% for advantage in advantages %}
-                    {% include "../blocks/advantage_block.html" %}
+                 {{ AdvantageItem(advantage) }}
                 {% endfor %}
             </ul>
         </div>

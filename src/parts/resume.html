@@ -1,31 +1,63 @@
 {% from "parts/macro.html" import ResumeStep %}
 
-{% set steps = [
+{% set stepsEducation = [
     {
-    name: 'Secondary',
-    place: 'Salimganj ',
-    text: 'I am alone, and fine',
-    data: '2004 - 2010',
-    odd: 'odd'
+    even: '',
+    name: 'Secondary school certificate',
+    place: 'Salimganj A R school, Dhaka, BD',
+    text: 'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.',
+    data: '2004 - 2010'
     },
     {
-    name: 'Secondary',
-    place: 'Salimganj ',
-    text: 'I am alone, and fine',
+    even: 'even',
+    name: 'Secondary school certificate',
+    place: 'Salimganj A R school, Dhaka, BD',
+    text: 'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.',
     data: '2004 - 2010'
-    } ]
+    },
+    {
+    even: '',
+    name: 'Secondary school certificate',
+    place: 'Salimganj A R school, Dhaka, BD',
+    text: 'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.',
+    data: '2004 - 2010'
+    }]
 %}
+
+{% set stepsExperience = [
+    {
+    even: 'even',
+    name: 'Secondary school certificate',
+    place: 'Salimganj A R school, Dhaka, BD',
+    text: 'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.',
+    data: '2004 - 2010'
+    },
+    {
+    even: '',
+    name: 'Secondary school certificate',
+    place: 'Salimganj A R school, Dhaka, BD',
+    text: 'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.',
+    data: '2004 - 2010'
+    }]
+%}
+
 
 <section id="resume" class="section">
     <div class="wrap">
         <div class="container">
-            <h2 class="title">about me</h2>
+            <h2 class="title">resume</h2>
             <span class="title-icon"></span>
             <div class="resume-content">
-                <h3 class="subtitle">Education</h3>
+                <h3 class="subtitle resume-subtitle">Education</h3>
                 <div class="resume__steps">
-                    {% for step in steps %}
-                      {{ ResumeStep }}
+                    {% for step in stepsEducation %}
+                      {{ ResumeStep(step) }}
+                    {% endfor %}
+                </div>
+                <h3 class="subtitle resume-subtitle">Experience</h3>
+                <div class="resume__steps">
+                    {% for step in stepsExperience %}
+                        {{ ResumeStep(step) }}
                     {% endfor %}
                 </div>
             </div>

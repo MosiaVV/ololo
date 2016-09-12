@@ -1,0 +1,46 @@
+{% from "parts/macro.html" import ArticleItem %}
+
+{% set blog = [
+    {
+        img: '../img/article_1.png',
+        tags: 'Print design, Photoshop',
+        title: 'How to creat a print ready brochure using photoshop',
+        author: 'Bin Burhan',
+        day: '06 Jan 2015',
+        share: '30',
+        comment: '05'
+    },
+    {
+        img: '../img/article_2.png',
+        tags: 'Print design, Photoshop',
+        title: 'How to creat a print ready brochure using photoshop',
+        author: 'Bin Burhan',
+        day: '06 Jan 2015',
+        share: '30',
+        comment: '05'
+    },
+    {
+        img: '../img/article_3.png',
+        tags: 'Print design, Photoshop',
+        title: 'How to creat a print ready brochure using photoshop',
+        author: 'Bin Burhan',
+        day: '06 Jan 2015',
+        share: '30',
+        comment: '05'
+    }
+] %}
+
+<section id="blog" class="section">
+    <div class="wrap">
+        <div class="container">
+            <h2 class="title">Latest POST</h2>
+            <span class="title-icon"></span>
+            <div class="blog-content">
+                {% for article in blog %}
+                   {{ ArticleItem(article) }}
+                {% endfor %}
+            </div>
+            <button>View more</button>
+        </div>
+    </div>
+</section>

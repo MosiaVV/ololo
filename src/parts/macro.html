@@ -1,12 +1,34 @@
-{% macro ResumeStep(name='', place='', text='', data='', odd='') %}
-<div class="resume__steps__item {{ odd }}">
+{% macro ResumeStep(item) %}
+<div class="resume__steps__item clearfix {{ item.even }}">
     <div class="resume__steps__item__description">
-        <p class="resume__steps__item__description-name">{{ ame }}</p>
-        <p class="resume__steps__item__description-place">{{ place }}</p>
-        <p class="resume__steps__item__description-text">{{ text }}</p>
+        <p class="resume__steps__item__description-name b">{{ item.name }}</p>
+        <p class="resume__steps__item__description-place b">{{ item.place }}</p>
+        <p class="resume__steps__item__description-text">{{ item.text }}</p>
     </div>
-    <div class="resume__steps__item__data">
-        <p>{{ data }}</p>
-    </div>
+    <div class="resume__steps__item__data">{{ item.data }}</div>
 </div>
+{% endmacro %}
+
+{% macro AdvantageItem(item) %}
+<li class="advantages__item">
+    <img src="{{ advantage.icon }}" alt=""  class="advantages__item__img">
+    <p class="advantages__item__quantity">{{ item.quantity }}</p>
+    <p class="advantages__item__name">{{ item.name }}</p>
+</li>
+{% endmacro %}
+
+{% macro ArticleItem(item) %}
+<article class="blog__item">
+    <img src="{{ item.img }}" alt=""  class="blog__item__img">
+    <div class="blog__item__content">
+        <p>{{ item.tags }}</p>
+        <p>{{ item.title }}</p>
+        <div class="blog_item__content__fitures">
+            <p>{{ item.author }}</p>
+            <p>{{ item.day }}</p>
+            <p>{{ item.share }}</p>
+            <p>{{ item.comment }}</p>
+        </div>
+    </div>
+</article>
 {% endmacro %}
