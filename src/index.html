@@ -1,13 +1,15 @@
 {% extends "templates/root.html" %}
 
 {% block header %}
-    <nav>
-        <ul class="menu">
-            {% for menuItem in Menu %}
-                {{ Menu(menuItem) }}
-            {% endfor %}
-        </ul>
-    </nav>
+<nav>
+    <ul class="nav-list">
+        {% for Hmenu_item in Hmenu %}
+        <li class="nav-list__item {{Hmenu_item.active}} b">
+            <a href="{{Hmenu_item.id}}" class="nav-list__link">{{Hmenu_item.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
 {% endblock %}
 
 {% block main %}

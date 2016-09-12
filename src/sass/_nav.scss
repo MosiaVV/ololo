@@ -1,0 +1,39 @@
+nav {
+  background-color: #ffffff;
+  border-bottom:1px solid #eeeeee;
+  padding-bottom: 1px;
+}
+
+.nav-list {
+  border-bottom:1px solid #eeeeee;
+  text-align: center;
+  max-width: 1170px;
+  width: 97.44%;
+  padding:0 1.28%;
+}
+
+.nav-list__item {
+  display: inline-block;
+  padding:30px 15px;
+}
+
+.nav-list__item:hover {
+  background-color: $aditioncolor;
+  a.nav-list__link {
+    color: #ffffff;
+  };
+}
+
+.nav-list__link {
+  color: $fourthcolor;
+  font-size: 1.14em;
+  line-height: 1.14em;
+  text-transform: uppercase;
+}
+
+.nav-list__item.active {
+  background-color: $aditioncolor;
+  a {
+    color: #ffffff;
+  };
+}
