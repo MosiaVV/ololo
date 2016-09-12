@@ -3,13 +3,10 @@
  */
 var gulp = require('gulp');
 var nunjucks = require('gulp-nunjucks-render');
-var frontMatter = require('gulp-front-matter');
 var data = require('gulp-data');
-var path = require('path');
 
 gulp.task('nunjucks', function() {
     return gulp.src('src/**/*.html')
-        .pipe(frontMatter({property: 'data'}))
         .pipe(data(function() {
             return require('../app/index.json')
         }))

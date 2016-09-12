@@ -5,19 +5,24 @@
       "name": "Leadership"
     },
     {
-      "number": 80
+      "number": 80,
+      "name": "Leadership"
     },
     {
-      "number": 80
+      "number": 80,
+      "name": "Leadership"
     },
     {
-      "number": 80
+      "number": 80,
+      "name": "Leadership"
     },
     {
-      "number": 80
+      "number": 80,
+      "name": "Leadership"
     },
     {
-      "number": 80
+      "number": 80,
+      "name": "Leadership"
     }
   ],
 
@@ -39,6 +44,48 @@
     },
     {
       "number": 85
+    }
+  ],
+  "Hmenu": [
+    {
+      "title": "HOME",
+      "id": "home",
+      "active": ""
+    },
+    {
+      "title": "ABOUT",
+      "id": "about",
+      "active": "active"
+    },
+    {
+      "title": "RESUME",
+      "id": "resume",
+      "active": ""
+    },
+    {
+      "title": "SKILLS",
+      "id": "skills",
+      "active": ""
+    },
+    {
+      "title": "WORK",
+      "id": "work",
+      "active": ""
+    },
+    {
+      "title": "BLOG",
+      "id": "BLOG",
+      "active": ""
+    },
+    {
+      "title": "CONTAT",
+      "id": "contat",
+      "active": ""
+    },
+    {
+      "title": "PAGES",
+      "id": "pages",
+      "active": ""
     }
   ]
 }

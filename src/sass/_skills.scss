@@ -16,6 +16,8 @@
   text-transform: uppercase;
   position: relative;
   padding-bottom: 30px;
+  text-align: center;
+  padding-top: 111px;
   @include respond-to(mobile) {
     padding-bottom: 20px;
   }
