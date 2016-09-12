@@ -13,9 +13,6 @@ gulp.task('nunjucks', function() {
         .pipe(data(function() {
             return require('../app/index.json')
         }))
-        // .pipe(data(function(file) {
-        //     return require('../app/' + path.basename(file.path).slice(0,-5) + '.json');
-        // }))
         .pipe(nunjucks(
             {
                 path: ['src/']
