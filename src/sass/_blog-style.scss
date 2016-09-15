@@ -1,5 +1,5 @@
 .blog-content {
-  padding-top: 44px;
+  padding-top: 3.76%;
   @include respond-to(mobile) {
     margin:0 -2%;
   }
@@ -153,7 +153,7 @@
 // button styles
 
 .blog__button {
-  padding-top: 41px;
+  padding-top: 3.42%;
   text-align: center;
   background-color: $white;
 }
