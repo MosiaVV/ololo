@@ -2,12 +2,12 @@
 
 {% block header %}
 <header>
+    {% include "parts/main.html" %}
     {% include "parts/nav.html" %}
 </header>
 {% endblock %}
 
 {% block main %}
-    {% include "parts/main.html" %}
     {% include "parts/resume.html" %}
     {% include "parts/skills.html" %}
     {% include "parts/advantages.html" %}

@@ -14,7 +14,7 @@
 {% macro AdvantageItem(item) %}
 <li class="advantages__item">
     <figure class="advantages__item__img"></figure>
-    <p class="advantages__item__quantity b">{{ item.quantity }}</p>
+    <p class="advantages__item__quantity b {{ "num" + n }}">{{ item.quantity }}</p>
     <p class="advantages__item__name b">{{ item.name }}</p>
 </li>
 {% endmacro %}
