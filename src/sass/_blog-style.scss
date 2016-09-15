@@ -1,5 +1,11 @@
 .blog-content {
-  padding-top: 44px;
+  padding-top: 3.76%;
+  @include respond-to(mobile) {
+    margin:0 -2%;
+  }
+  @include respond-to(x-mobile) {
+    margin:0;
+  }
 }
 
 .blog__item {
@@ -8,15 +14,48 @@
   width: 28.66%;
   border: 1px solid $thirdcolor;
   padding: 5px;
+  border-bottom: double $thirdcolor;
+  cursor: pointer;
+  transition: $transition;
+  @include respond-to(tablet-and-mobile) {
+    width: 28%;
+  }
+  @include respond-to(mobile) {
+    width: 44%;
+    width: calc(45% - 12px);
+    margin:0 2%;
+  }
+  @include respond-to(x-mobile) {
+    width: 90%;
+    width: calc(90% - 12px);
+    max-width: 230px;
+    margin:0;
+  }
 }
 
-.blog-content .blog__item:nth-of-type(2) {
-  margin: 0 2%;
+.blog-content .blog__item {
+  &:nth-of-type(2) {
+    margin: 0 2%;
+    @include respond-to(mobile) {
+      display: none;
+    };
+  };
+  &:nth-of-type(3) {
+    @include respond-to(x-mobile) {
+      display: none;
+    };
+  }
 }
-
 .blog__item__content {
   font-size: 14px;
   padding: 26px 10px 22px 10px;
+  @include respond-to(tablet-and-mobile) {
+    font-size: 13px;
+    padding-top:30px;
+  };
+  @include respond-to(mobile) {
+    font-size: 12px;
+  };
   >p:first-of-type {
     color: $maincolor;
     font-size: 0.857em;
@@ -36,6 +75,34 @@
 
 .blog__item img {
   width: 100%;
+  transition: all .2s ease-in-out;
+  position: relative;
+}
+
+.blog__item__content {
+  position: relative;
+  &::before {
+    content: url("../pic/article_link_gor.png");
+    position: absolute;
+    display: block;
+    width: 47px;
+    height: 32px;
+    transform: rotate(45deg);
+    background-color: $maincolor;
+    padding-top: 15px;
+    top: -23.5px;
+    right: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    @include respond-to(tablet-and-mobile) {
+      width: 41px;
+      height: 27px;
+      padding-top: 14px;
+      top: -20.5px;
+    };
+    @include respond-to(mobile) {
+    };
+  }
 }
 
 .blog_item__content__fitures {
@@ -70,4 +137,45 @@
 
 .blog_item__content__fitures .blog_item__comment:before {
   background: url("../pic/article_comment.png") center center no-repeat;
+}
+
+.blog__item:hover {
+  background: $maincolor;
+  border-color: $borderhover;
+  .blog__item__content {
+    p {
+      color: $white !important;
+    }
+
+  }
+}
+
+// button styles
+
+.blog__button {
+  padding-top: 3.42%;
+  text-align: center;
+  background-color: $white;
+}
+
+.blog__button__link {
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 17px 31px;
+  font-size: 1em;
+  color: $white;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: $maincolor;
+  box-shadow: 0px 3px 0px 0px $buttonshadow;
+}
+
+.blog__button__link:active {
+  transform: translate(0px, 3px);
+  box-shadow: 0px 1px 0px 0px;
+}
+
+.blog__button__link:hover {
+  background-color: $maincolor;
 }

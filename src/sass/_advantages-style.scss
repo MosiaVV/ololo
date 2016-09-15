@@ -1,7 +1,7 @@
 #advantages {
   background: url("../img/advantage_cover.png") center no-repeat;
   background-size: cover;
-  color: #ffffff;
+  color: $white;
   text-transform: uppercase;
   padding: 0;
 }
@@ -16,11 +16,20 @@
   width: 24%;
   z-index: 1;
   vertical-align: top;
+  @include respond-to(mobile) {
+    width: 49%;
+  };
 }
 
 .advantages__item__img {
   margin: 0 auto;
   height: 66px;
+  @include respond-to(tablet-and-mobile) {
+    height: 56px;
+  };
+  @include respond-to(mobile) {
+    height: 46px;
+  };
 }
 
 ul {
@@ -49,9 +58,30 @@ ul {
 .advantages__item__quantity {
   font-size: 3.57em;
   line-height: 2em;
+  @include respond-to(tablet-and-mobile) {
+    line-height: 1.8em;
+  };
+  @include respond-to(mobile) {
+    line-height: 1.5em;
+  };
 }
 
 .advantages__item__name {
   font-size: 1.2857em;
   line-height: 2em;
+  @include respond-to(tablet-and-mobile) {
+    line-height: 1.8em;
+  };
+  @include respond-to(mobile) {
+    line-height: 1.5em;
+  };
+}
+
+ul {
+  .advantages__item:nth-of-type(3),
+  .advantages__item:nth-of-type(4){
+    @include respond-to(mobile) {
+      padding-top:6%;
+    }
+  }
 }
