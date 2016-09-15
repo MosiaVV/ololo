@@ -1,0 +1,102 @@
+.main {
+  /*width: 100%;*/
+  text-align: center;
+}
+.main-wrapper {
+  content: "";
+  width: 100%;
+  //display: block;
+  //margin: 0 auto;
+
+}
+.main-content {
+  width: 51%;
+  background-color: #272b31;
+  float: left;
+  clear: both;
+  padding-top: 151px;
+  background-size: cover;
+  /*padding-left: 274px;*/
+}
+
+.main-contact {
+  width: 49%;
+  background-image: url(../img/chel.png);
+  background-size: cover;
+  float: left;
+  height: 100%;
+}
+
+h1 {
+  color: #f8f8f8;
+  font-family: Roboto;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 79px;
+  text-transform: uppercase;
+  padding-bottom: 38px;
+}
+
+h2 {
+  color: #68c3a3;
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  text-transform: uppercase;
+  padding-right: 21px;
+}
+
+.main-description {
+  width: 483px;
+  height: 92px;
+  color: #f7f7f7;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 26px;
+  padding-top: 34px;
+  padding-bottom: 59px;
+  text-align: left;
+  padding-left: 137px;
+}
+
+.main-sign {
+  padding-right: 237px;
+  padding-bottom: 45px;
+}
+
+
+.contact_1 {
+  color: white;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 33px;
+}
+
+.send {
+  width: 200px;
+  height: 57px;
+  background-color: #52b3d9;
+  border-radius: 5px;
+  color: white;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.download {
+  width: 200px;
+  height: 57px;
+  background-color: #68c3a3;
+  border-radius: 5px;
+  color: #f3f3f3;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+}

@@ -3,13 +3,16 @@
         <h2 class="skills__title">Skills</h2>
     </div>
     <div class="range-skills">
+        {% for Leadership in Leaderships %}
         <div class="range-skills__item">
+            <div class="range-skills__data">
+                {{Leadership.number}}
+            </div>
             <span class="range-skills__title">
-            {% for Leadership in Leaderships %}
                 {{Leadership.name}}
-            {% endfor %}
             </span>
         </div>
+        {% endfor %}
     </div>
 </div>
 
