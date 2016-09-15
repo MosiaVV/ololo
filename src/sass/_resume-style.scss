@@ -183,30 +183,37 @@
 .resume__steps__item:hover {
   &::before {
     background-color: $maincolor;
+    transition: $transition;
   };
   .resume__steps__item__description {
     background-color: $maincolor;
     color: $white;
     border-color: $borderhover;
+    transition: $transition;
     &::before {
       background-color: $maincolor;
       border-color: $borderhover;
+      transition: $transition;
       @include respond-to(mobile) {
         border-top: 1px solid transparent;
         border-right: double transparent;
+        transition: $transition;
       };
     };
     .resume__steps__item__description-place {
       color: $white;
+      transition: $transition;
     }
   };
   .resume__steps__item__data {
     color: $maincolor;
+    transition: $transition;
   }
 }
 
 .resume__steps__item.even:hover {
   .resume__steps__item__description:before {
+    transition: $transition;
     border-top: 1px solid transparent;
     border-right: double transparent;
   }
@@ -217,6 +224,7 @@
   &:hover {
     .item_wrap::before {
       background-color: $maincolor;
+      transition: $transition;
     }
   }
 }
