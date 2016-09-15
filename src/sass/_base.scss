@@ -3,6 +3,12 @@ body {
   color: $textcolor;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
+  @include respond-to(tablet-and-mobile) {
+    font-size: 13px;
+  };
+  @include respond-to(mobile) {
+    font-size: 12px;
+  };
 }
 
 section {

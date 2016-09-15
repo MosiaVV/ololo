@@ -22,7 +22,7 @@
     {
         img: '../img/article_3.png',
         tags: 'Print design, Photoshop',
-        title: 'How to creat a print ready brochure using photoshop',
+        title: 'How to create a print ready brochure using photoshop',
         author: 'Bin Burhan',
         day: '06 Jan 2015',
         share: '30',
@@ -40,7 +40,9 @@
                    {{ ArticleItem(article) }}
                 {% endfor %}
             </div>
-            <button>View more</button>
+            <button class="blog__button">
+                <a href="#blog" class="blog__button__link">View more</a>
+            </button>
         </div>
     </div>
 </section>

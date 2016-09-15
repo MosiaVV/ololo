@@ -1,0 +1,11 @@
+<nav class="mobile-menu" id="menu">
+    <label for="show-menu" class="show-menu"><span>MON JA CAI</span><div class="lines"></div></label>
+    <input type="checkbox" id="show-menu">
+    <ul class="nav-list">
+        {% for Hmenu_item in Hmenu %}
+        <li class="nav-list__item {{Hmenu_item.active}} b">
+            <a href="{{Hmenu_item.id}}" class="nav-list__link">{{Hmenu_item.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
