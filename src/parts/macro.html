@@ -1,11 +1,13 @@
 {% macro ResumeStep(item) %}
-<div class="resume__steps__item clearfix {{ item.even }}">
-    <div class="resume__steps__item__description">
-        <p class="resume__steps__item__description-name b">{{ item.name }}</p>
-        <p class="resume__steps__item__description-place b">{{ item.place }}</p>
-        <p class="resume__steps__item__description-text">{{ item.text }}</p>
+<div class="resume__steps__item {{ item.even }}">
+    <div class="item_wrap clearfix">
+        <div class="resume__steps__item__description">
+            <p class="resume__steps__item__description-name b">{{ item.name }}</p>
+            <p class="resume__steps__item__description-place b">{{ item.place }}</p>
+            <p class="resume__steps__item__description-text">{{ item.text }}</p>
+        </div>
+        <div class="resume__steps__item__data b">{{ item.data }}</div>
     </div>
-    <div class="resume__steps__item__data">{{ item.data }}</div>
 </div>
 {% endmacro %}
 

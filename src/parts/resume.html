@@ -1,46 +1,6 @@
 {% from "parts/macro.html" import ResumeStep %}
-
-{% set stepsEducation = [
-    {
-    even: '',
-    name: 'Secondary school certificate',
-    place: 'Salimganj A R school, Dhaka, BD',
-    text: 'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.',
-    data: '2004 - 2010'
-    },
-    {
-    even: 'even',
-    name: 'Secondary school certificate',
-    place: 'Salimganj A R school, Dhaka, BD',
-    text: 'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.',
-    data: '2004 - 2010'
-    },
-    {
-    even: '',
-    name: 'Secondary school certificate',
-    place: 'Salimganj A R school, Dhaka, BD',
-    text: 'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.',
-    data: '2004 - 2010'
-    }]
-%}
-
-{% set stepsExperience = [
-    {
-    even: 'even',
-    name: 'Secondary school certificate',
-    place: 'Salimganj A R school, Dhaka, BD',
-    text: 'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.',
-    data: '2004 - 2010'
-    },
-    {
-    even: '',
-    name: 'Secondary school certificate',
-    place: 'Salimganj A R school, Dhaka, BD',
-    text: 'I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.',
-    data: '2004 - 2010'
-    }]
-%}
-
+{% from "parts/data.html" import stepsEducation %}
+{% from "parts/data.html" import stepsExperience %}
 
 <section id="resume" class="section">
     <div class="wrap">

@@ -1,7 +1,9 @@
 {% extends "templates/root.html" %}
 
 {% block header %}
-    i am header
+<header>
+    {% include "parts/nav.html" %}
+</header>
 {% endblock %}
 
 {% block main %}
@@ -10,9 +12,10 @@
     {% include "parts/skills.html" %}
     {% include "parts/advantages.html" %}
     {% include "parts/blog.html" %}
+    {% include "parts/get_hired.html" %}
 {% endblock %}
 
 {% block footer %}
-    i am footer
+{% include "parts/footer.html" %}
 {% endblock %}
 

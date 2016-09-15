@@ -1,0 +1,47 @@
+#get_hired {
+  background: url("../img/get_hired_bg.png") center center no-repeat;
+  background-size: cover;
+  color: $white;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+#get_hired .wrap {
+  padding: 6.47% 0;
+  background-color: rgba(104, 195, 163, 0.76);
+  background-image: linear-gradient(to top, #389474 0%, transparent 100%);
+}
+
+#get_hired .subtitle {
+  color: $white;
+  font-size: 2.57em;
+  padding-bottom: 3.42%;
+}
+
+.get_hired__button {
+  text-align: center;
+  background-color: transparent;
+}
+
+.get_hired__button__link {
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid $white;
+  padding: 20px 54px;
+  font-size: 1em;
+  color: $white;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: transparent;
+  transition: $transition;
+}
+
+.get_hired__button__link:active {
+  box-shadow: 0px 1px 0px 0px;
+}
+
+.get_hired__button__link:hover {
+  background-color: $white;
+  color: $maincolor;
+}

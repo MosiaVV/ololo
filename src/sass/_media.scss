@@ -28,13 +28,27 @@
   text-align: justify;
   text-justify: newspaper;
 }
-
+$break-x-extra-small: 320px;
+$break-extra-small: 480px;
 $break-small: 767px;
 $break-large: 768px;
 $break-large-right: 1280px;
 $break-large-desktop:1600px;
+
 @mixin respond-to($media) {
-  @if $media == mobile {
+  @if $media == xx-mobile {
+    @media only screen and (max-width: $break-x-extra-small) {
+      @content;
+    }
+  } @else if $media == x-to-xx-mobile {
+    @media only screen and (min-width: $break-x-extra-small + 1) and (max-width: $break-extra-small - 1) {
+      @content;
+    }
+  } @else if $media == x-mobile {
+    @media only screen and (max-width: $break-extra-small) {
+      @content;
+    }
+  } @else if $media == mobile {
     @media only screen and (max-width: $break-small) {
       @content;
     }
