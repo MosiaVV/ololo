@@ -19,8 +19,9 @@
   padding:0 0 0 2.35%;
   @include respond-to(mobile) {
     display: block;
-    width:100%;
+    width:calc(100% - 12px);
     margin:0;
+    padding: 0;
   };
 }
 
@@ -28,12 +29,17 @@
   padding:0 2.35% 0 0;
   @include respond-to(mobile) {
     padding: 0 0 6% 0;
+    width:100%;
   };
 }
 
 address {
   font-style: normal;
   font-size: 0;
+  padding-bottom:36px;
+  @include respond-to(mobile) {
+    padding-bottom:10px;
+  };
   >div {
     display: inline-block;
     vertical-align: top;
@@ -51,10 +57,13 @@ address {
   font-weight: 700;
 }
 
-.map {
+iframe.map {
   padding:5px;
-  border:1px solid $thirdcolor;
-  height:100%;
+  border:1px solid $thirdcolor !important;
+  width:calc(100% - 12px);
+  @include respond-to(mobile) {
+    height: 300px;
+  }
 }
 
 .form {
@@ -76,8 +85,4 @@ address {
   line-height:2em;
   font-weight:400;
 }
-
-.gmnoprint {
-
-} //масштаб
 
