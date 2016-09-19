@@ -47,14 +47,10 @@
   }
 }
 .blog__item__content {
-  font-size: 14px;
+  @include fs;
   padding: 26px 10px 22px 10px;
   @include respond-to(tablet-and-mobile) {
-    font-size: 13px;
     padding-top:30px;
-  };
-  @include respond-to(mobile) {
-    font-size: 12px;
   };
   >p:first-of-type {
     color: $maincolor;

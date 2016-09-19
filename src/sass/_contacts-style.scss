@@ -1,0 +1,83 @@
+.contacts__button {
+  @extend .blog__button;
+}
+.contacts__button__link{
+  @extend .blog__button__link;
+}
+
+.contacts-content {
+  display: table;
+  text-align: left;
+  width: 100%;
+  padding-top: 3.76%;
+}
+
+.contacts-content__form,
+.contacts-content__map {
+  display: table-cell;
+  width: 50%;
+  padding:0 0 0 2.35%;
+  @include respond-to(mobile) {
+    display: block;
+    width:100%;
+    margin:0;
+  };
+}
+
+.contacts-content__form {
+  padding:0 2.35% 0 0;
+  @include respond-to(mobile) {
+    padding: 0 0 6% 0;
+  };
+}
+
+address {
+  font-style: normal;
+  font-size: 0;
+  >div {
+    display: inline-block;
+    vertical-align: top;
+    width:calc(50%);
+    @include fs;
+    span, p {
+      line-height:2em;
+    }
+  }
+}
+
+.form_title, .title_adr, .title_tel {
+  @include fs
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.map {
+  padding:5px;
+  border:1px solid $thirdcolor;
+  height:100%;
+}
+
+.form {
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-control {
+  width: 100%;
+  @include fs;
+  padding: 15px;
+}
+
+.form-label {
+  padding: 12px 0 3px;
+  display: block;
+  line-height:2em;
+  font-weight:400;
+}
+
+.gmnoprint {
+
+} //масштаб
+

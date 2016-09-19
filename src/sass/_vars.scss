@@ -10,4 +10,16 @@ $aditioncolor: #68c3a3;
 $titleline: #e1e1e1;
 $borderhover: #57b393;
 $buttonshadow: #53b08f;
+$formbg:  #f7f7f7;
 $transition: all 0.3s ease-in-out;
+$fs: 14px;
+
+@mixin fs {
+  font-size: $fs;
+  @include respond-to(tablet-and-mobile) {
+    font-size: 13px;
+  };
+  @include respond-to(mobile) {
+    font-size: 12px;
+  };
+}
