@@ -43,11 +43,34 @@ address {
   >div {
     display: inline-block;
     vertical-align: top;
-    width:calc(50%);
+    width:calc(50% - 63px);
     @include fs;
+    padding-left:63px;
+    position: relative;
+    @include respond-to(xx-mobile) {
+      padding-left:0;
+      width:50%;
+    };
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top:6px;
+      left: 0;
+      width:32px;
+      height:44px;
+      background: url(../pic/adress.png) center no-repeat;
+      background-size: contain;
+      @include respond-to(xx-mobile) {
+        display: none;
+      }
+    };
     span, p {
       line-height:2em;
-    }
+    };
+  }
+  >div:last-of-type::after {
+    background: url(../pic/tel.png) center no-repeat;
   }
 }
 
@@ -63,6 +86,7 @@ iframe.map {
   width:calc(100% - 12px);
   @include respond-to(mobile) {
     height: 300px;
+    width:100%;
   }
 }
 
