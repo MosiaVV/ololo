@@ -53,10 +53,8 @@ input,
 select,
 textarea {
   display: block;
-  border:  1px solid #000000;
   -webkit-border-radius: 0;
   border-radius: 0;
-  font-family: serif;
   vertical-align: top;
   box-sizing:  border-box;
   outline: none;
@@ -68,6 +66,8 @@ textarea {
   resize: none;
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: $formbg;
+  border: 1px solid $thirdcolor;
 }
 
 table, td {

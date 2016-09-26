@@ -1,0 +1,44 @@
+// $('.num').waypoint(function(direction) {
+//     $('.num').animate({ num: 07 - 1/* - начало */ }, {
+//         duration: 700,
+//         step: function (num){
+//             this.innerHTML = (num + 01).toFixed(0) // + '%'
+//         }
+//     })},{
+//     offset: '99%'
+//
+// });
+//
+// $('.num2').waypoint(function(direction) {
+//     $('.num'2).animate({ num: 651 - 10/* - начало */ }, {
+//         duration: 700,
+//         step: function (num){
+//             this.innerHTML = (num + 600).toFixed(0) // + '%'
+//         }
+//     })},{
+//     offset: '99%'
+//
+// });
+//
+//
+// $('.num3').waypoint(function(direction) {
+//     $('.num'3).animate({ num: 251 - 10/* - начало */ }, {
+//         duration: 700,
+//         step: function (num){
+//             this.innerHTML = (num + 200).toFixed(0) // + '%'
+//         }
+//     })},{
+//     offset: '99%'
+//
+// });
+//
+// $('.num4').waypoint(function(direction) {
+//     $('.num'4).animate({ num: 05 - 1/* - начало */ }, {
+//         duration: 700,
+//         step: function (num){
+//             this.innerHTML = (num + 01).toFixed(0) // + '%'
+//         }
+//     })},{
+//     offset: '99%'
+//
+// });

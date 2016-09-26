@@ -1,11 +1,18 @@
 .skills-wrapper {
   width: 100%;
   background-color: #1a1e23;
+  padding-bottom: 110px;
 }
 
 .skills {
-  width: 1141px;
+  width: 1160px;
   margin: 0 auto;
+  @include respond-to(tablet) {
+    width: 768px;
+  }
+  @include respond-to(mobile) {
+    width: 320px;
+  }
 }
 
 .skills__title {
@@ -35,4 +42,108 @@
     right: 0;
     bottom: 0;
   }
+}
+
+.new-tab-link {
+  padding-right: 14px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3ggXDSIzCeRHfQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAA9SURBVBjTY2RAA/+XMvxHF2NkwAOwacCq4P9Shv8suFQzRiNsYUEXwKoJ2VhkNrIaJgYiAAs2N2BVRMirAD6JHi10MCdVAAAAAElFTkSuQmCC) no-repeat right center;
+}
+
+.page-title {
+  font: 400 40px/1.5 Open Sans, sans-serif;
+  text-align: center;
+}
+
+.about-skills {
+    margin: 0 auto;
+  @include respond-to(tablet) {
+    max-width: 550px;
+  }
+  @include respond-to(mobile) {
+    padding: 0 10px;
+  }
+}
+
+.about-skills__circle-wrap {
+  display: inline-block;
+  margin-left: 60px;
+  position: relative;
+  width: 140px;
+  height: 190px;
+  &:first-of-type {
+    margin-left: 0;
+  }
+  @include respond-to(tablet) {
+    &:nth-child(3n + 4) {
+      margin-left: 0;
+    }
+  }
+  @include respond-to(mobile) {
+    margin-left: 0;
+    &:nth-child(even) {
+      margin-left: 15px;
+    }
+  }
+}
+
+.about-skills__circle {
+position: absolute;
+  top: 0;
+  left: 0;
+  width: 140px;
+  height: 140px;
+  .circle-empty {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 140px;
+  }
+  .circle-colored {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 140px;
+    z-index: 1;
+  }
+}
+
+.psevdo-number {
+  position: absolute;
+  top: 63px;
+  color: #f7f7f7;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+
+.about-skills__title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 46px;
+  display: block;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.psevdo-number__data {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.skills__sub-title {
+  color: #f1f1f1;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 62px 0 45px 0;
 }

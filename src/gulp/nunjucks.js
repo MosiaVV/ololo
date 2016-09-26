@@ -19,5 +19,6 @@ gulp.task('nunjucks', function() {
 });
 
 gulp.task('nunjucks:watch', function () {
+    gulp.watch('src/app/*.json', ['nunjucks']);
     gulp.watch('src/**/*.html', ['nunjucks']);
 });

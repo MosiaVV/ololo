@@ -14,7 +14,7 @@
 {% macro AdvantageItem(item) %}
 <li class="advantages__item">
     <figure class="advantages__item__img"></figure>
-    <p class="advantages__item__quantity b">{{ item.quantity }}</p>
+    <p class="advantages__item__quantity b {{ "num" + n }}">{{ item.quantity }}</p>
     <p class="advantages__item__name b">{{ item.name }}</p>
 </li>
 {% endmacro %}
@@ -33,4 +33,27 @@
         </div>
     </div>
 </article>
+{% endmacro %}
+
+{% macro form_input(name, value='', title=name, type='text') %}
+<div class="form-group">
+    <label class="form-label" for="{{ name }}_id">{{ title }}</label>
+    <input class="form-control" id="{{ name }}_id" name="{{ name }}" type="{{ type }}" value="{{ value | escape }}">
+</div>
+{% endmacro %}
+
+{% macro form_textarea(name, value='', title=name) %}
+<div class="form-group">
+    <label class="form-label" for="{{ name }}_id">{{ title }}</label>
+    <textarea class="form-control" name="{{ name }}" id="{{ name }}_id" cols="20" rows="5"></textarea>
+</div>
+{% endmacro %}
+
+{% macro feedback_form(action="", method="POST") %}
+<form class="form" action="{{ action }}" method="{{ method }}">
+    {{ form_input("Name", '', "Name") }}
+    {{ form_input("Email", '', "Email", 'email') }}
+    {{ form_input("Subject", '', "Subject") }}
+    {{ form_textarea("Message", '', 'Message') }}
+</form>
 {% endmacro %}

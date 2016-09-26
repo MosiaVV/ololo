@@ -15,7 +15,8 @@ gulp.task('browserSync', function() {
 gulp.task('watch',
     [
         'sass:watch',
-        'nunjucks:watch'
+        'nunjucks:watch',
+        'js:watch'
     ]
 );
 
