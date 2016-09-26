@@ -10,5 +10,6 @@ gulp.task('build',
         'imagemin',
         'imagemin-pic',
         'copy'
+        'js'
     ]
 );

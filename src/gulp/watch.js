@@ -17,6 +17,7 @@ gulp.task('watch',
         'sass:watch',
         'nunjucks:watch',
         'copy:watch'
+        'js:watch'
     ]
 );
 
