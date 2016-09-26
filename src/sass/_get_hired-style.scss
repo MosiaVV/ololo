@@ -4,10 +4,13 @@
   color: $white;
   text-transform: uppercase;
   padding: 0;
+  .subtitle {
+    padding-top: 0;
+  }
 }
 
 #get_hired .wrap {
-  padding: 6.47% 0;
+ @include top_padding;
   background-color: rgba(104, 195, 163, 0.76);
   background-image: linear-gradient(to top, #389474 0%, transparent 100%);
 }

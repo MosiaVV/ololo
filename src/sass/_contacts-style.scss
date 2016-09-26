@@ -12,7 +12,7 @@
   align-items: stretch;
   justify-content: space-between;
   text-align: left;
-  padding-top: 3.76%;
+  @include sub_padding;
   @include respond-to(mobile) {
     flex-direction: column;
     margin: 0 auto;
@@ -40,7 +40,7 @@
 .contacts-content__form {
   padding:0 2.35% 0 0;
   @include respond-to(mobile) {
-    padding: 6% 0 0 0;
+    padding: 7.76% 0 0 0;
     width:100%;
     order:2;
     margin:0 auto;

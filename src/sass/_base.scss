@@ -6,7 +6,7 @@ body {
 }
 
 section {
-  padding: 6.47% 0;
+  @include top_padding;
 }
 
 .container {
@@ -31,6 +31,12 @@ section {
   font-weight: 700;
   position: relative;
   padding-bottom: 2.735%;
+  @include respond-to(tablet-and-mobile) {
+    padding-bottom: 3.735%;
+  };
+  @include respond-to(mobile) {
+    padding-bottom: 4.735%;
+  };
 }
 
 .subtitle {

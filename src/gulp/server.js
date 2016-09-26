@@ -11,19 +11,3 @@ gulp.task('connect', function() {
         livereload: true
     });
 });
-
-// gulp.task('html', function () {
-//     gulp.src('build/*.html')
-//         .pipe(connect.reload());
-// });
-
-// gulp.task('sass', function () {
-//     gulp.src('build/**/*.css')
-//         .pipe(connect.reload());
-// });
-
-// gulp.task('connect:watch', function () {
-//     gulp.watch(['./build/*.html'], ['html']);
-// });
-
-// gulp.task('default', ['connect', 'watch']);
