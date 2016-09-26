@@ -16,12 +16,12 @@ gulp.task('watch',
     [
         'sass:watch',
         'nunjucks:watch',
-        'copy:watch'
+        'copy:watch',
         'js:watch'
     ]
 );
 
-gulp.task('watchreload', ['browserSync', 'sass:watch', 'nunjucks:watch', 'imagemin:watch', 'copy:watch'], function (){
+gulp.task('watchreload', ['browserSync', 'sass:watch', 'nunjucks:watch', 'imagemin:watch', 'js:watch'], function (){
     gulp.watch('build/css/*.css', browserSync.reload);
     gulp.watch('build/*.html', browserSync.reload);
     gulp.watch('build/img/*', browserSync.reload);
