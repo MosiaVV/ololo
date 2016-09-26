@@ -9,6 +9,7 @@ gulp.task('build',
         'nunjucks',
         'imagemin',
         'imagemin-pic',
+        'copy',
         'js'
     ]
 );
