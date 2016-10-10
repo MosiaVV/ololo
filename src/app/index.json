@@ -1,11 +1,11 @@
 {
   "Leaderships": [
     {
-      "number": 80,
+      "number": 45,
       "name": "Leadership"
     },
     {
-      "number": 80,
+      "number": 67,
       "name": "Leadership"
     },
     {
@@ -28,22 +28,28 @@
 
   "Skills": [
     {
-      "number": 95
+      "number": 95,
+      "title": "UX Design"
     },
     {
-      "number": 50
+      "number": 50,
+      "title": "Brendign Design"
     },
     {
-      "number": 40
+      "number": 40,
+      "title": "Visual Design"
     },
     {
-      "number": 60
+      "number": 60,
+      "title": "Motion Graphic"
     },
     {
-      "number": 75
+      "number": 75,
+      "title": "Visual Design"
     },
     {
-      "number": 85
+      "number": 85,
+      "title": "Motion Graphic"
     }
   ],
   "Hmenu": [

@@ -2,8 +2,8 @@
 var exitStatistic = true;
 var scrolled = window.pageYOffset || document.documentElement.scrollTop;
 $(window).scroll(function (){
-    var statistic = document.getElementById('tutor-statistic');
-    var statisticJQ = $('#tutor-statistic');
+    var statistic = document.getElementById('skills');
+    var statisticJQ = $('#skills');
     if (statistic){
         var statisticSourceBottom = statistic.getBoundingClientRect().top + statistic.offsetHeight/2 + window.pageYOffset;
     }
@@ -34,6 +34,9 @@ $(window).scroll(function (){
                 bar.animate(thisValue/maxValue);
             };
         });
+
         exitStatistic = false;
+        $('.title-svg').addClass('active');
+        $('.range-skills__number').addClass('active');
     }
 });
