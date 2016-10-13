@@ -23,3 +23,23 @@ $fs: 14px;
     font-size: 12px;
   };
 }
+
+@mixin top_padding {
+  padding: 6.47% 0;
+  @include respond-to(tablet-and-mobile) {
+    padding: 10.47% 0;
+  };
+  @include respond-to(mobile) {
+    padding: 14.47% 0;
+  };
+}
+
+@mixin sub_padding {
+  padding-top: 3.76%;
+  @include respond-to(tablet-and-mobile) {
+    padding-top: 5.76%;
+  };
+  @include respond-to(mobile) {
+    padding-top: 7.76%;
+  };
+}
