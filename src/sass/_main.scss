@@ -1,14 +1,23 @@
 .main {
   padding: 0;
   text-align: left;
+  position: relative;
 }
 .main-container {
   content: "";
   text-align: left;
   padding-left: 6%;
-
-
 }
+
+  .grdien_1 {
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(0,0,0, 1) 100%);
+    height: 316px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+
 .main-content {
   width: 51%;
   background-color: #272b31;
@@ -18,11 +27,12 @@
 }
 
 .main-contact {
-  width: 49%;
+  //width: 49%;
   background-image: url('../img/chel.png');
   background-size: cover;
-  height: 100%;
+  //height: 100%;
   display: table-cell;
+
 }
 
 h1 {
@@ -61,29 +71,99 @@ h2 {
 
 .send {
   margin-bottom: 20%;
+  position: relative;
   width: 200px;
-  height: 57px;
+  line-height: 57px;
   background-color: #52b3d9;
   border-radius: 5px;
   color: white;
-  font-family: Roboto;
-  font-size: 14px;
+   font-size: 14px;
   font-weight: 700;
-  line-height: 28px;
   text-transform: uppercase;
-  margin-right: 34px;
+  margin-right: 23px;
+  padding-left: 50px;
+  display: inline-block;
+  box-sizing: border-box;
+  &:after{
+    content: '';
+    background-image: url(../img/send.png);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    bottom: 18px;
+    right: 7px;
+  }
 }
+
 
 .download {
   margin-bottom: 5.24%;
+  position: relative;
   width: 200px;
-  height: 57px;
+  //height: 57px;
   background-color: #68c3a3;
   border-radius: 5px;
   color: #f3f3f3;
-  font-family: Roboto;
   font-size: 14px;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 57px;
   text-transform: uppercase;
+  display: inline-block;
+  padding-left: 50px;
+  box-sizing: border-box;
+  &:after{
+    content: '';
+    position: absolute;
+    background-image: url(../img/download.png);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    width: 18px;
+    height: 16px;
+    top: 20px;
+    left: 15px;
+    bottom: 18px;
+    right: 7px;
+  }
+}
+
+.contact_1 {
+  width: 515px;
+  display: block;
+  margin: 0 auto;
+  li{
+    display: inline-block;
+    width: 250px;
+    color: red;
+  }
+}
+
+
+.social-links {
+  width: 515px;
+  display: block;
+  margin: 0 auto;
+  li {
+    display: inline-block;
+    a {
+      display: inline-block;
+      border: 1px solid red;
+      border-radius: 3px;
+      transform: rotate(45deg);
+      width: 40px;
+      height: 40px;
+      margin-right: 28px;
+      .fb {
+        background-image: url(../img/f_b.png);
+        width: 9px;
+        height: 18px;
+        display: inline-block;
+      }
+      .twiter{
+        
+      }
+    }
+  }
 }

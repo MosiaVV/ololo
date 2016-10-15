@@ -4,3 +4,61 @@
   font-weight: 300;
   line-height: 28px;
 }
+
+.icon_art {
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.icon_border {
+  display: inline-block;
+  border: 1px solid red;
+  border-radius: 13px;
+  -webkit-transform: rotate(45deg);
+  width: 180px;
+  height: 180px;
+  position: relative;
+  margin-left: 52px;
+  margin-right: 52px;
+  position: relative;
+
+
+  border-left-color: red; /* Цвет линии слева */
+  border-left-style: double; /* Стиль линии */
+  border-left-width: thick; /* Толщина линии */
+  //&:after{
+  //  content: '';
+  //  position: absolute;
+  //  top: 2px;
+  //  left: 2px;
+  //  border: 1px solid red;
+  //  border-radius: 13px;
+  //  transform: rotate(90deg);
+  //  display: inline-block;
+  //  width: 174px;
+  //  height: 174px;
+  //}
+}
+
+.ab_icon {
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 28px;
+  padding-top: 28px;
+}
+
+.ab_sign {
+  width: 160px;
+  color: #2c3e50;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.icon_container {
+  position: absolute;
+  transform: rotate(-45deg);
+  width: 180px;
+  height: 180px;
+}

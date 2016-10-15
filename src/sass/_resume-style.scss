@@ -1,7 +1,7 @@
 //tablet-portrait
 
 .resume-content {
-  @include sub_padding
+  @include sub_padding;
   .resume-subtitle:nth-of-type(2){
     padding-top:56px;
     padding-bottom:32px;
