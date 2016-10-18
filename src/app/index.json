@@ -55,42 +55,42 @@
   "Hmenu": [
     {
       "title": "HOME",
-      "id": "home",
+      "id": "",
       "active": ""
     },
     {
       "title": "ABOUT",
-      "id": "about",
+      "id": "#aboutme",
       "active": "active"
     },
     {
       "title": "RESUME",
-      "id": "resume",
+      "id": "#resume",
       "active": ""
     },
     {
       "title": "SKILLS",
-      "id": "skills",
+      "id": "#skills",
       "active": ""
     },
     {
       "title": "WORK",
-      "id": "work",
+      "id": "#work",
       "active": ""
     },
     {
       "title": "BLOG",
-      "id": "BLOG",
+      "id": "#blog",
       "active": ""
     },
     {
       "title": "CONTAT",
-      "id": "contat",
+      "id": "#contats",
       "active": ""
     },
     {
       "title": "PAGES",
-      "id": "pages",
+      "id": "#pages",
       "active": ""
     }
   ]

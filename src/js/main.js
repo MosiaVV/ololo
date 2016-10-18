@@ -44,43 +44,24 @@ $(window).scroll(function (){
 $(function() {
     var controller = new ScrollMagic.Controller();
 
-    // Scene 0
-    var scene0 = new ScrollMagic.Scene({
-        duration:  $('#resume').height(),
-        triggerElement: "#resume",
-        triggerHook: 0.5
-    })
-        .setClassToggle('.title-svg', 'active_black')
-        .addIndicators({name:'resume'})
-        .addTo(controller);
+    // loop for each section
+    $('section').each(function(){
+        var scene0 = new ScrollMagic.Scene({
+            duration: '110%',
+            triggerElement: this,
+            triggerHook: 0.5
+        })
+            .setClassToggle('.title-svg', 'active_black')
+            .addTo(controller);
+    });
 
-    // Scene 1
-    var scene1 = new ScrollMagic.Scene({
-        triggerElement: "#blog",
-        triggerHook: 0.5,
-        duration: $('#blog').height()
-    })
-        .setClassToggle('.title-svg', 'active_black')
-        .addIndicators({name:'blog'})
-        .addTo(controller);
-
-    // Scene 2
-    var scene2 = new ScrollMagic.Scene({
-        triggerElement: "#contacts",
-        triggerHook: 0.5,
-        duration: $('#contacts').height()
-    })
-        .setClassToggle('.title-svg', 'active_black')
-        .addIndicators({name:'contacts'})
-        .addTo(controller);
-
-    // Scene 3
+    // for skills blsck section
     var scene3 = new ScrollMagic.Scene({
         triggerElement: "#skills",
         triggerHook: 0.5,
-        duration: $('#skills').height()
+        duration: '110%'
     })
         .setClassToggle('.title-svg', 'active')
-        .addIndicators({name:'skills'})
         .addTo(controller);
+
 });
