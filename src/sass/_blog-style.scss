@@ -1,3 +1,7 @@
+#blog {
+  background-color: #ffffff;
+}
+
 .blog-content {
   @include sub_padding;
   @include respond-to(mobile) {

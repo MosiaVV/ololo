@@ -44,8 +44,26 @@ $(window).scroll(function (){
 $(function() {
     var controller = new ScrollMagic.Controller();
 
+    var pinIntroScene = new ScrollMagic.Scene({
+        triggerElement: 'nav',
+        triggerHook: 0,
+    })
+        .setPin('nav', {pushFollowers: false})
+        .addIndicators()
+        .addTo(controller);
+
+    // parallax
+    var slideParallaxScene = new ScrollMagic.Scene({
+        triggerElement: '.bcg-parallax',
+        triggerHook: 1,
+        duration: '100%'
+    })
+    .setTween(TweenMax.from('.bcg', 1, {y: '-50%', ease:Power0.easeNone}))
+    .addTo(controller);
+
     // loop for each section
     $('section').each(function(){
+
         var scene0 = new ScrollMagic.Scene({
             duration: '110%',
             triggerElement: this,

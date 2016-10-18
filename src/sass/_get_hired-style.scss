@@ -1,18 +1,29 @@
-#get_hired {
-  background: url("../img/get_hired_bg.png") center center no-repeat;
-  background-size: cover;
+.bcg-parallax {
+  @include top_padding;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(to top, #389474 0%, transparent 100%);
+  background-color: rgba(104, 195, 163, 0.76);
   color: $white;
   text-transform: uppercase;
-  padding: 0;
-  .subtitle {
-    padding-top: 0;
-  }
 }
-
-#get_hired .wrap {
- @include top_padding;
-  background-color: rgba(104, 195, 163, 0.76);
-  background-image: linear-gradient(to top, #389474 0%, transparent 100%);
+.bcg {
+  background: url("../img/get_hired_bg.png") center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  opacity:0.2;
+}
+.content-wrapper {
+  width: 90%;
+  margin:0 auto;
+  max-width: 1140px;
+  position: relative;
+  z-index: 2;
 }
 
 #get_hired .subtitle {
