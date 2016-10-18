@@ -40,3 +40,37 @@ $(window).scroll(function (){
         $('.range-skills__number').addClass('active');
     }
 });
+
+$(function() {
+    var controller = new ScrollMagic.Controller();
+
+    // Scene 0
+    var scene0 = new ScrollMagic.Scene({
+        duration:  $('#resume').height(),
+        triggerElement: "#resume",
+        triggerHook: 0.5
+    })
+        .setClassToggle('.title-svg', 'active_black')
+        .addIndicators({name:'resume'})
+        .addTo(controller);
+
+    // Scene 1
+    var scene1 = new ScrollMagic.Scene({
+        triggerElement: "#blog",
+        triggerHook: 0.5,
+        duration: $('#blog').height()
+    })
+        .setClassToggle('.title-svg', 'active_black')
+        .addIndicators({name:'blog'})
+        .addTo(controller);
+
+    // Scene 2
+    var scene2 = new ScrollMagic.Scene({
+        duration: $('#contacts').height(),
+        triggerElement: "#contacts",
+        triggerHook: 0.5
+    })
+        .setClassToggle('.title-svg', 'active_black')
+        .addIndicators({name:'contacts'})
+        .addTo(controller);
+});
