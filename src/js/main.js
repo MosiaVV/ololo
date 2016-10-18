@@ -36,7 +36,7 @@ $(window).scroll(function (){
         });
 
         exitStatistic = false;
-        $('.title-svg').addClass('active');
+        // $('.title-svg').addClass('active');
         $('.range-skills__number').addClass('active');
     }
 });
@@ -66,11 +66,21 @@ $(function() {
 
     // Scene 2
     var scene2 = new ScrollMagic.Scene({
-        duration: $('#contacts').height(),
         triggerElement: "#contacts",
-        triggerHook: 0.5
+        triggerHook: 0.5,
+        duration: $('#contacts').height()
     })
         .setClassToggle('.title-svg', 'active_black')
         .addIndicators({name:'contacts'})
+        .addTo(controller);
+
+    // Scene 3
+    var scene3 = new ScrollMagic.Scene({
+        triggerElement: "#skills",
+        triggerHook: 0.5,
+        duration: $('#skills').height()
+    })
+        .setClassToggle('.title-svg', 'active')
+        .addIndicators({name:'skills'})
         .addTo(controller);
 });
