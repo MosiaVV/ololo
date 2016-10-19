@@ -41,29 +41,36 @@ $(window).scroll(function (){
     }
 });
 
+// scrollMagic + TweenMax animation
 $(function() {
     var controller = new ScrollMagic.Controller();
 
+    // pin menu to top
     var pinIntroScene = new ScrollMagic.Scene({
         triggerElement: 'nav',
-        triggerHook: 0,
+        triggerHook: 0
     })
         .setPin('nav', {pushFollowers: false})
         .addIndicators()
+        .setTween(TweenMax.to('nav>label', 2, {padding: "-=15px -=0"}))
         .addTo(controller);
 
     // parallax
+    var parallaxTl = new TimelineMax();
+    parallaxTl
+        .from('.content-wrapper', 0.4, {autoAlpha: 0, ease:Power0.easeNone}, 0.4)
+        .from('.bcg', 2, {y: '-50%', ease:Power0.easeNone, scale: 1.1}, 0)
+        ;
     var slideParallaxScene = new ScrollMagic.Scene({
         triggerElement: '.bcg-parallax',
         triggerHook: 1,
         duration: '100%'
     })
-    .setTween(TweenMax.from('.bcg', 1, {y: '-50%', ease:Power0.easeNone}))
-    .addTo(controller);
+        .setTween(parallaxTl)
+        .addTo(controller);
 
-    // loop for each section
+    // loop svg-animation for each section
     $('section').each(function(){
-
         var scene0 = new ScrollMagic.Scene({
             duration: '110%',
             triggerElement: this,
@@ -73,7 +80,7 @@ $(function() {
             .addTo(controller);
     });
 
-    // for skills blsck section
+    // svg-animation for skills section
     var scene3 = new ScrollMagic.Scene({
         triggerElement: "#skills",
         triggerHook: 0.5,
@@ -81,5 +88,4 @@ $(function() {
     })
         .setClassToggle('.title-svg', 'active')
         .addTo(controller);
-
 });
