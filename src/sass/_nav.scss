@@ -1,5 +1,7 @@
 label[for="show-menu"] {
   display: none;
+  background-color: $white;
+  position: relative;
   @include respond-to(mobile) {
     display: block;
     cursor: pointer;
@@ -18,6 +20,8 @@ label[for="show-menu"] {
 nav {
   border-bottom:double $thirdcolor;
   background-color: $white;
+  position: relative;
+  z-index:3;
 }
 
 .nav-list {

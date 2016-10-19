@@ -169,6 +169,19 @@ position: absolute;
       animation-timing-function: linear;
     }
   }
+  &.active_black {
+    #title-svg-icon {
+      stroke: #1a1e23;
+      stroke-width: 1;
+      stroke-dasharray: 90px;
+      stroke-dashoffset: 90px;
+      animation-name: draw;
+      animation-duration: 5s;
+      animation-fill-mode: forwards; // Stay on the last frame
+      animation-iteration-count: 1; // Run only once
+      animation-timing-function: linear;
+    }
+  }
 }
 
 

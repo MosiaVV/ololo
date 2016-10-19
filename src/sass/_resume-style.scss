@@ -1,5 +1,6 @@
-//tablet-portrait
-
+#resume {
+  background-color: #ffffff;
+}
 .resume-content {
   @include sub_padding;
   .resume-subtitle:nth-of-type(2){
@@ -27,7 +28,7 @@
       height:10px;
       background-color: $titleline;
       transform: rotate(45deg);
-      left:calc(50% - 4px);
+      left:calc(50% - 5.5px);
       z-index: 1;
       @include respond-to(mobile) {
         left:44.5px;
