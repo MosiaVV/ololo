@@ -15,6 +15,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    z-index: 10;
   }
 
 
@@ -27,7 +28,7 @@
 }
 
 .main-contact {
-  //width: 49%;
+  width: 49%;
   background-image: url('../img/chel.png');
   background-size: cover;
   //height: 100%;
@@ -136,7 +137,7 @@ h2 {
   li{
     display: inline-block;
     width: 250px;
-    color: red;
+    color: white;
   }
 }
 
@@ -145,24 +146,97 @@ h2 {
   width: 515px;
   display: block;
   margin: 0 auto;
+  margin-top: 157px;
+  position: relative;
+  z-index: 9999;
   li {
     display: inline-block;
+    border: 1px solid white;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-right: 20px;
     a {
       display: inline-block;
-      border: 1px solid red;
-      border-radius: 3px;
-      transform: rotate(45deg);
-      width: 40px;
-      height: 40px;
+      //border: 1px solid white;
+      //border-radius: 3px;
+      //transform: rotate(45deg);
+      width: 46px;
+      height: 46px;
+      transform: rotate(-45deg);
       margin-right: 28px;
+      position: relative;
       .fb {
         background-image: url(../img/f_b.png);
-        width: 9px;
-        height: 18px;
+        background-repeat: no-repeat;
+        //transform: rotate(-45deg);
+        width: 10px;
+        height: 27px;
         display: inline-block;
+        z-index: 8888;
+        position: absolute;
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
       .twiter{
-        
+        background-image: url(../img/svitr.png);
+        background-repeat: no-repeat;
+        //transform: rotate(-45deg);
+        width: 18px;
+        height: 22px;
+        display: inline-block;
+        z-index: 8888;
+        position: absolute;
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .bench {
+        background-image: url(../img/bench.png);
+        background-repeat: no-repeat;
+        //transform: rotate(-45deg);
+        width: 18px;
+        height: 22px;
+        display: inline-block;
+        z-index: 8888;
+        position: absolute;
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .boll {
+        background-image: url(../img/boll.png);
+        background-repeat: no-repeat;
+        //transform: rotate(-45deg);
+        width: 18px;
+        height: 22px;
+        display: inline-block;
+        z-index: 8888;
+        position: absolute;
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .pin {
+        background-image: url(../img/pin.png);
+        background-repeat: no-repeat;
+        //transform: rotate(-45deg);
+        width: 18px;
+        height: 22px;
+        display: inline-block;
+        z-index: 8888;
+        position: absolute;
+        opacity: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
   }

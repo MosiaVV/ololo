@@ -12,7 +12,7 @@
 
 .icon_border {
   display: inline-block;
-  border: 1px solid red;
+  border: 1px solid #EEE;
   border-radius: 13px;
   -webkit-transform: rotate(45deg);
   width: 180px;
@@ -20,12 +20,10 @@
   position: relative;
   margin-left: 52px;
   margin-right: 52px;
-  position: relative;
-
-
-  border-left-color: red; /* Цвет линии слева */
-  border-left-style: double; /* Стиль линии */
-  border-left-width: thick; /* Толщина линии */
+  border-right-style: double; /* Стиль линии */
+  border-right-width: thick; /* Толщина линии */
+  border-bottom-style: double; /* Стиль линии */
+  border-bottom-width: thick; /* Толщина линии */
   //&:after{
   //  content: '';
   //  position: absolute;

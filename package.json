@@ -22,6 +22,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-svgo": "^1.0.3",
     "path": "^0.12.7",
+    "progressbar.js": "^1.0.1",
     "require-dir": "^0.3.0"
   },
   "scripts": {
