@@ -36,7 +36,7 @@ $(window).scroll(function (){
         });
 
         exitStatistic = false;
-        // $('.title-svg').addClass('active');
+        $('.title-svg').addClass('active');
         $('.range-skills__number').addClass('active');
     }
 });
