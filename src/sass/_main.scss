@@ -31,7 +31,6 @@
   width: 49%;
   background-image: url('../img/chel.png');
   background-size: cover;
-  //height: 100%;
   display: table-cell;
 
 }
@@ -65,7 +64,7 @@ h2 {
 
 
 .contact_1 {
-  color: white;
+  color: #26f727;
   font-weight: 400;
   line-height: 33px;
 }
@@ -104,7 +103,6 @@ h2 {
   margin-bottom: 5.24%;
   position: relative;
   width: 200px;
-  //height: 57px;
   background-color: #68c3a3;
   border-radius: 5px;
   color: #f3f3f3;
@@ -160,9 +158,6 @@ h2 {
     margin-right: 20px;
     a {
       display: inline-block;
-      //border: 1px solid white;
-      //border-radius: 3px;
-      //transform: rotate(45deg);
       width: 46px;
       height: 46px;
       transform: rotate(-45deg);
@@ -171,7 +166,6 @@ h2 {
       .fb {
         background-image: url(../img/f_b.png);
         background-repeat: no-repeat;
-        //transform: rotate(-45deg);
         width: 10px;
         height: 27px;
         display: inline-block;
@@ -185,7 +179,6 @@ h2 {
       .twiter{
         background-image: url(../img/svitr.png);
         background-repeat: no-repeat;
-        //transform: rotate(-45deg);
         width: 18px;
         height: 22px;
         display: inline-block;
@@ -199,7 +192,6 @@ h2 {
       .bench {
         background-image: url(../img/bench.png);
         background-repeat: no-repeat;
-        //transform: rotate(-45deg);
         width: 18px;
         height: 22px;
         display: inline-block;
@@ -213,7 +205,6 @@ h2 {
       .boll {
         background-image: url(../img/boll.png);
         background-repeat: no-repeat;
-        //transform: rotate(-45deg);
         width: 18px;
         height: 22px;
         display: inline-block;
@@ -227,7 +218,6 @@ h2 {
       .pin {
         background-image: url(../img/pin.png);
         background-repeat: no-repeat;
-        //transform: rotate(-45deg);
         width: 18px;
         height: 22px;
         display: inline-block;
