@@ -51,7 +51,6 @@ $(function() {
         triggerHook: 0
     })
         .setPin('nav', {pushFollowers: false})
-        .addIndicators()
         .setTween(TweenMax.to('nav>label', 2, {padding: "-=15px -=0"}))
         .addTo(controller);
 
