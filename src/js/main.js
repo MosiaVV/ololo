@@ -87,4 +87,22 @@ $(function() {
     })
         .setClassToggle('.title-svg', 'active')
         .addTo(controller);
+
+    // fade animation for blog section
+    var scrollFade = new TimelineMax();
+    scrollFade
+        .from('.blog-content', 0.5, {y: '50%'}, 0.5)
+        .from('.blog-content', 0.5, {opacity: 0}, 0.8)
+    ;
+    var blogscene = new ScrollMagic.Scene({
+        triggerElement: "#blog",
+        triggerHook: 0.8,
+        duration: '80%'
+    })
+        .setTween(scrollFade)
+        .addTo(controller)
+        .addIndicators({});
+
+    // fade animation for resume section
+
 });
