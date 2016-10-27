@@ -32,6 +32,7 @@
   background-image: url('../img/chel.png');
   background-size: cover;
   display: table-cell;
+  position: relative;
 
 }
 
@@ -62,12 +63,6 @@ h2 {
   padding-bottom: 45px;
 }
 
-
-.contact_1 {
-  color: #26f727;
-  font-weight: 400;
-  line-height: 33px;
-}
 
 .send {
   margin-bottom: 20%;
@@ -129,9 +124,13 @@ h2 {
 }
 
 .contact_1 {
-  width: 515px;
-  display: block;
-  margin: 0 auto;
+  font-weight: 400;
+  line-height: 33px;
+  padding-bottom: 53px;
+  position: absolute;
+  bottom: 35px;
+  left: 52px;
+  z-index: 35;
   li{
     display: inline-block;
     width: 250px;
@@ -141,12 +140,10 @@ h2 {
 
 
 .social-links {
-  width: 515px;
-  display: block;
-  margin: 0 auto;
-  margin-top: 157px;
-  position: relative;
+  margin-left: 50px;
+  position: absolute;
   z-index: 9999;
+  bottom: 20px;
   li {
     display: inline-block;
     border: 1px solid white;
