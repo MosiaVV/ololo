@@ -68,7 +68,7 @@ $(function() {
         .setTween(parallaxTl)
         .addTo(controller);
 
-    // loop svg-animation for each section
+    // loop svg-animation to each section
     $('section').each(function(){
         var scene0 = new ScrollMagic.Scene({
             duration: '110%',
@@ -101,8 +101,24 @@ $(function() {
     })
         .setTween(scrollFade)
         .addTo(controller)
-        .addIndicators({});
-
+        // .addIndicators({})
+        ;
     // fade animation for resume section
+    var fadeGorisontal = new TimelineMax();
+    fadeGorisontal
+        .from('.resume__steps__item:not(.even)>.item_wrap>.resume__steps__item__description', 0.5, {x: '-50%'}, 0.5)
+        .from('.even>.item_wrap>.resume__steps__item__description', 0.5, {x: '50%'}, 0.5)
+    ;
 
+    $('.resume__steps__item__description').each(function() {
+        var resumescene = new ScrollMagic.Scene({
+                triggerElement: this,
+                triggerHook: 0.6,
+                duration: $('.resume__steps__item').height()
+            })
+                .setTween(fadeGorisontal)
+                .addTo(controller)
+                .addIndicators({})
+            ;
+    });
 });
