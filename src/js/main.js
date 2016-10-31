@@ -68,7 +68,7 @@ $(function() {
         .setTween(parallaxTl)
         .addTo(controller);
 
-    // loop svg-animation for each section
+    // loop svg-animation to each section
     $('section').each(function(){
         var scene0 = new ScrollMagic.Scene({
             duration: '110%',
@@ -87,4 +87,38 @@ $(function() {
     })
         .setClassToggle('.title-svg', 'active')
         .addTo(controller);
+
+    // fade animation for blog section
+    var scrollFade = new TimelineMax();
+    scrollFade
+        .from('.blog-content', 0.5, {y: '50%'}, 0.5)
+        .from('.blog-content', 0.5, {opacity: 0}, 0.8)
+    ;
+    var blogscene = new ScrollMagic.Scene({
+        triggerElement: "#blog",
+        triggerHook: 0.8,
+        duration: '80%'
+    })
+        .setTween(scrollFade)
+        .addTo(controller)
+        // .addIndicators({})
+        ;
+    // fade animation for resume section
+    var fadeGorisontal = new TimelineMax();
+    fadeGorisontal
+        .from('.resume__steps__item:not(.even)>.item_wrap>.resume__steps__item__description', 0.5, {x: '-50%'}, 0.5)
+        .from('.even>.item_wrap>.resume__steps__item__description', 0.5, {x: '50%'}, 0.5)
+    ;
+
+    $('.resume__steps__item__description').each(function() {
+        var resumescene = new ScrollMagic.Scene({
+                triggerElement: this,
+                triggerHook: 0.6,
+                duration: $('.resume__steps__item').height()
+            })
+                .setTween(fadeGorisontal)
+                .addTo(controller)
+                .addIndicators({})
+            ;
+    });
 });
