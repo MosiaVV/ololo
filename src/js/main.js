@@ -101,22 +101,33 @@ $(function() {
     })
         .setTween(scrollFade)
         .addTo(controller)
-        // .addIndicators({})
         ;
-    // fade animation for resume section
-    var fadeGorisontal = new TimelineMax();
-    fadeGorisontal
-        .from('.resume__steps__item:not(.even)>.item_wrap>.resume__steps__item__description', 0.5, {x: '-50%'}, 0.5)
-        .from('.even>.item_wrap>.resume__steps__item__description', 0.5, {x: '50%'}, 0.5)
-    ;
 
-    $('.resume__steps__item__description').each(function() {
+    // fade animation for resume section
+    if ($(window).width() <= 768) {
+        $('.resume__steps__item:not(.even)>.item_wrap>.resume__steps__item__description').each(function () {
+            var resumescene = new ScrollMagic.Scene({
+                    triggerElement: this,
+                    triggerHook: 0.6,
+                    duration: $('.resume__steps__item').height()
+                })
+                    .setTween(TweenMax
+                        .from(this, 0.5, {x: '-50%', opacity: 0}, 0.5)
+                    )
+                    .addTo(controller)
+                    .addIndicators({})
+                ;
+        });
+    }
+    $('.even>.item_wrap>.resume__steps__item__description').each(function() {
         var resumescene = new ScrollMagic.Scene({
                 triggerElement: this,
                 triggerHook: 0.6,
                 duration: $('.resume__steps__item').height()
             })
-                .setTween(fadeGorisontal)
+                .setTween(TweenMax
+                    .from(this, 0.5, {x: '50%', opacity: 0}, 0.5)
+                )
                 .addTo(controller)
                 .addIndicators({})
             ;
