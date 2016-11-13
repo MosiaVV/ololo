@@ -117,7 +117,6 @@ $(function() {
                         .from(this, 0.5, {x: '-50%', opacity: 0}, 0.5)
                     )
                     .addTo(controller)
-                    .addIndicators({})
                 ;
         });
     }
@@ -133,7 +132,6 @@ $(function() {
                         .from(this, 0.5, {x: '50%', opacity: 0}, 0.5)
                     )
                     .addTo(controller)
-                    .addIndicators({})
                 ;
         });
     }
@@ -148,7 +146,6 @@ $(function() {
                     .from(this, 0.5, {x: '50%', opacity: 0}, 0.5)
                 )
                 .addTo(controller)
-                .addIndicators({})
             ;
     });
 });
