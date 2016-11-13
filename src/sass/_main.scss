@@ -20,7 +20,7 @@
 
 
 .main-content {
-  width: 51%;
+  width: 50%;
   background-color: #272b31;
   padding-top: 151px;
   background-size: cover;
@@ -28,7 +28,7 @@
 }
 
 .main-contact {
-  width: 49%;
+  width: 48%;
   background-image: url('../img/chel.png');
   background-size: cover;
   display: table-cell;
@@ -140,7 +140,7 @@ h2 {
 
 
 .social-links {
-  margin-left: 50px;
+  //margin-left: 50px;
   position: absolute;
   z-index: 9999;
   bottom: 20px;
@@ -228,3 +228,71 @@ h2 {
     }
   }
 }
+
+
+@include respond-to(tablet) {
+  .grdien_1{
+    width: 100%;
+  }
+  .main {
+    width: 100%;
+  }
+  .social-links {
+    padding-left: 30px;
+  }
+  .main-contact {
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 49%;
+    display: table-cell;
+  }
+  .main-content {
+    width: 51%;
+    display: table-cell;
+  }
+}
+//это планшет
+@include respond-to(from-desktop) {
+  .grdien_1{
+    width: 100%;
+  }
+  .main {
+    width: 100%;
+  }
+  .social-links {
+    padding-left: 30px;
+     }
+  .main-contact {
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 49%;
+    display: table-cell;
+  }
+  .main-content {
+    width: 51%;
+    display: table-cell;
+  }
+}
+//это монитор
+@include respond-to(mobile) {
+  .grdien_1{
+    width: 100%;
+  }
+  .main {
+    width: 100%;
+  }
+  .social-links {
+    padding-left: 30px;
+      }
+  .main-contact {
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 49%;
+    display: table-cell;
+  }
+  .main-content {
+    width: 51%;
+    display: table-cell;
+  }
+}
+//это моибла
