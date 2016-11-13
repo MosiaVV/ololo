@@ -191,6 +191,16 @@ position: absolute;
   }
 }
 
+.range-skills {
+  @include respond-to(tablet) {
+    width: 535px;
+    margin: 0 auto;
+  }
+  @include respond-to(mobile) {
+    width: 100%;
+  }
+}
+
 .range-skills__item {
   width: 533px;
   float: left;
@@ -198,6 +208,16 @@ position: absolute;
   margin-bottom: 40px;
   &:nth-child(odd) {
     margin-left: 0;
+  }
+  @include respond-to(tablet) {
+    width: 100%;
+    margin-left: 0;
+    float: none;
+  }
+  @include respond-to(mobile) {
+    width: 100%;
+    margin-left: 0;
+    float: none;
   }
 }
 
@@ -252,21 +272,84 @@ position: absolute;
     transition: all 2s linear;
   }
   &.active {
-    &:first-of-type {
-      &:before {
-        width: 340px;
-      }
-      span {
-        width: 340px;
-      }
+
+  }
+}
+
+.range-skills__item:first-of-type {
+  .range-skills__number.active {
+
+    &:before {
+      width: 95%;
     }
-    &:nth-child(2) {
-      &:before {
-        width: 300px;
-      }
-      span {
-        width: 300px;
-      }
+    span {
+      width: 95%;
     }
+  }
+
+}
+
+.range-skills__item:nth-child(2) {
+  .range-skills__number.active {
+
+    &:before {
+      width: 50%;
+    }
+    span {
+      width: 50%;
+    }
+
+  }
+}
+
+.range-skills__item:nth-child(3) {
+  .range-skills__number.active {
+
+    &:before {
+      width: 40%;
+    }
+    span {
+      width: 40%;
+    }
+
+  }
+}
+
+.range-skills__item:nth-child(4) {
+  .range-skills__number.active {
+
+    &:before {
+      width: 60%;
+    }
+    span {
+      width: 60%;
+    }
+
+  }
+}
+
+.range-skills__item:nth-child(5) {
+  .range-skills__number.active {
+
+    &:before {
+      width: 75%;
+    }
+    span {
+      width: 75%;
+    }
+
+  }
+}
+
+.range-skills__item:nth-child(6) {
+  .range-skills__number.active {
+
+    &:before {
+      width: 85%;
+    }
+    span {
+      width: 85%;
+    }
+
   }
 }
