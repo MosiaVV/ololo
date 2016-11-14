@@ -21,6 +21,9 @@
   border-bottom: double $thirdcolor;
   cursor: pointer;
   transition: $transition;
+  background: -webkit-linear-gradient($maincolor, $maincolor) bottom  no-repeat;
+  background-size: 100% 0;
+  transition: 0.4s;
   @include respond-to(tablet-and-mobile) {
     width: 28%;
   }
@@ -140,7 +143,8 @@
 }
 
 .blog__item:hover {
-  background: $maincolor;
+  //background: $maincolor;
+  background-size: 100% 100%;
   border-color: $borderhover;
   .blog__item__content {
     p {

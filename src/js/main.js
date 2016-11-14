@@ -89,7 +89,7 @@ $(document).ready(function(){
             .setClassToggle('.title-svg', 'active')
             .addTo(controller);
 
-        // fade animation for blog section
+        // animation for blog section
         var scrollFade = new TimelineMax();
         scrollFade
             .from('.blog-content', 0.5, {y: '50%'}, 0.5)
@@ -104,6 +104,11 @@ $(document).ready(function(){
                 .addTo(controller)
             ;
 
+        $('.blog__item').each(function(){
+            var tl = new TimelineLite();
+
+        });
+
         // fade animation for resume section
 
         if ($(window).width() > 768) {
@@ -115,7 +120,7 @@ $(document).ready(function(){
                         duration: $('.resume__steps__item').height()
                     })
                         .setTween(TweenMax
-                            .from(this, 0.5, {x: '-50%', opacity: 0}, 0.5)
+                            .from(this, 0.5, {x: '-50%', ease:Back.easeOut, opacity: 0}, 0.5)
                         )
                         .addTo(controller)
                     ;
@@ -130,7 +135,7 @@ $(document).ready(function(){
                         duration: $('.resume__steps__item').height()
                     })
                         .setTween(TweenMax
-                            .from(this, 0.5, {x: '50%', opacity: 0}, 0.5)
+                            .from(this, 0.5, {x: '50%', ease:Back.easeOut, opacity: 0}, 0.5)
                         )
                         .addTo(controller)
                     ;
@@ -144,11 +149,12 @@ $(document).ready(function(){
                     duration: $('.resume__steps__item').height()
                 })
                     .setTween(TweenMax
-                        .from(this, 0.5, {x: '50%', opacity: 0}, 0.5)
+                        .from(this, 0.5, {x: '50%', ease:Back.easeOut, opacity: 0}, 0.5)
                     )
                     .addTo(controller)
                 ;
         });
+
     });
     $(document).on('click', '.works-list__item', function(event){
         event.preventDefault();
