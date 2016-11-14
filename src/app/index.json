@@ -55,13 +55,13 @@
   "Hmenu": [
     {
       "title": "HOME",
-      "id": "",
+      "id": "#main",
       "active": ""
     },
     {
       "title": "ABOUT",
       "id": "#aboutme",
-      "active": "active"
+      "active": ""
     },
     {
       "title": "RESUME",
@@ -84,13 +84,8 @@
       "active": ""
     },
     {
-      "title": "CONTAT",
-      "id": "#contats",
-      "active": ""
-    },
-    {
-      "title": "PAGES",
-      "id": "#pages",
+      "title": "CONTACT",
+      "id": "#contacts",
       "active": ""
     }
   ]

@@ -52,7 +52,6 @@ $(document).ready(function(){
             triggerHook: 0
         })
             .setPin('nav', {pushFollowers: false})
-            .setTween(TweenMax.to('nav>label', 2, {padding: "-=15px -=0"}))
             .addTo(controller);
 
         // parallax
@@ -103,11 +102,19 @@ $(document).ready(function(){
                 .setTween(scrollFade)
                 .addTo(controller)
             ;
+        // animation for advantages section
+        var advantagescene = new ScrollMagic.Scene({
+            triggerElement: "#advantages",
+            triggerHook: 0.8,
+            duration: $('#advantages').height()
+        })
+                .addTo(controller)
+                .addIndicators()
+                .setTween(TweenMax
+                    .staggerFrom(".advantages__item", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2)
 
-        $('.blog__item').each(function(){
-            var tl = new TimelineLite();
-
-        });
+                )
+            ;
 
         // fade animation for resume section
 
