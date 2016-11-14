@@ -109,7 +109,6 @@ $(document).ready(function(){
             duration: $('#advantages').height()
         })
                 .addTo(controller)
-                .addIndicators()
                 .setTween(TweenMax
                     .staggerFrom(".advantages__item", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2)
 
