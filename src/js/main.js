@@ -52,7 +52,6 @@ $(document).ready(function(){
             triggerHook: 0
         })
             .setPin('nav', {pushFollowers: false})
-            .setTween(TweenMax.to('nav>label', 2, {padding: "-=15px -=0"}))
             .addTo(controller);
 
         // parallax
@@ -89,7 +88,7 @@ $(document).ready(function(){
             .setClassToggle('.title-svg', 'active')
             .addTo(controller);
 
-        // fade animation for blog section
+        // animation for blog section
         var scrollFade = new TimelineMax();
         scrollFade
             .from('.blog-content', 0.5, {y: '50%'}, 0.5)
@@ -103,6 +102,18 @@ $(document).ready(function(){
                 .setTween(scrollFade)
                 .addTo(controller)
             ;
+        // animation for advantages section
+        var advantagescene = new ScrollMagic.Scene({
+            triggerElement: "#advantages",
+            triggerHook: 0.8,
+            duration: $('#advantages').height()
+        })
+                .addTo(controller)
+                .setTween(TweenMax
+                    .staggerFrom(".advantages__item", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2)
+
+                )
+            ;
 
         // fade animation for resume section
 
@@ -115,10 +126,9 @@ $(document).ready(function(){
                         duration: $('.resume__steps__item').height()
                     })
                         .setTween(TweenMax
-                            .from(this, 0.5, {x: '-50%', opacity: 0}, 0.5)
+                            .from(this, 0.5, {x: '-50%', ease:Back.easeOut, opacity: 0}, 0.5)
                         )
                         .addTo(controller)
-                        .addIndicators({})
                     ;
             });
         }
@@ -131,10 +141,9 @@ $(document).ready(function(){
                         duration: $('.resume__steps__item').height()
                     })
                         .setTween(TweenMax
-                            .from(this, 0.5, {x: '50%', opacity: 0}, 0.5)
+                            .from(this, 0.5, {x: '50%', ease:Back.easeOut, opacity: 0}, 0.5)
                         )
                         .addTo(controller)
-                        .addIndicators({})
                     ;
             });
         }
@@ -146,12 +155,12 @@ $(document).ready(function(){
                     duration: $('.resume__steps__item').height()
                 })
                     .setTween(TweenMax
-                        .from(this, 0.5, {x: '50%', opacity: 0}, 0.5)
+                        .from(this, 0.5, {x: '50%', ease:Back.easeOut, opacity: 0}, 0.5)
                     )
                     .addTo(controller)
-                    .addIndicators({})
                 ;
         });
+
     });
     $(document).on('click', '.works-list__item', function(event){
         event.preventDefault();
