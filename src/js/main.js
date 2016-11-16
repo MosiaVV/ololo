@@ -89,24 +89,44 @@ $(document).ready(function(){
             .addTo(controller);
 
         // animation for blog section
-        var scrollFade = new TimelineMax();
-        scrollFade
-            .from('.blog-content', 0.5, {y: '50%'}, 0.5)
-            .from('.blog-content', 0.5, {opacity: 0}, 0.8)
-        ;
         var blogscene = new ScrollMagic.Scene({
                 triggerElement: "#blog",
                 triggerHook: 0.8,
                 duration: '80%'
             })
-                .setTween(scrollFade)
+                .setTween(TweenMax
+                    .staggerFrom(".blog__item", 1, {y: '50%', opacity:0, delay:2, ease:Back.easeInOut}, 0.5)
+
+                )
                 .addTo(controller)
             ;
+        $(".blog__item").hover(over, out);
+
+        function over(){
+            TweenMax.to(this, 0, {y:-20})
+            TweenMax.to($(this).find(".blog__item__img"), 10, {scale: "1.15"})
+        }
+
+        function out(){
+            TweenMax.to(this, 0, {y:0})
+            TweenMax.to($(this).find(".blog__item__img"), 0, {scale: "1"})
+        }
+
+        var blogbuttonscene = new ScrollMagic.Scene({
+                triggerElement: ".button",
+                triggerHook: 0.5,
+                duration: $('.button').height()*1.5
+            })
+                .addTo(controller)
+                .setClassToggle('.button', 'button-active')
+                .addIndicators()
+            ;
+
         // animation for advantages section
         var advantagescene = new ScrollMagic.Scene({
             triggerElement: "#advantages",
             triggerHook: 0.8,
-            duration: $('#advantages').height()
+            duration: "100%"
         })
                 .addTo(controller)
                 .setTween(TweenMax

@@ -21,7 +21,9 @@
 
 {% macro ArticleItem(item) %}
 <article class="blog__item">
-    <img src="{{ item.img }}" alt=""  class="blog__item__img">
+    <div class="blog__item__img__wrap">
+        <img src="{{ item.img }}" alt=""  class="blog__item__img">
+    </div>
     <div class="blog__item__content">
         <p>{{ item.tags }}</p>
         <p>{{ item.title }}</p>
