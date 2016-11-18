@@ -59,6 +59,7 @@ $(document).ready(function(){
         parallaxTl
             .from('.content-wrapper', 0.4, {autoAlpha: 0, ease:Power0.easeNone}, 0.4)
             .from('.bcg', 2, {y: '-50%', ease:Power0.easeNone, scale: 1.1}, 0)
+            .from($('#get_hired').find(".container"), 1, {opacity: 0.5, scale: 0.5, y: -20}, 0)
         ;
         var slideParallaxScene = new ScrollMagic.Scene({
             triggerElement: '.bcg-parallax',
@@ -69,9 +70,9 @@ $(document).ready(function(){
             .addTo(controller);
 
         // loop svg-animation to each section
-        $('section').each(function(){
+        $('.section--wtitle').each(function(){
             var scene0 = new ScrollMagic.Scene({
-                duration: '110%',
+                duration: $(this).height(),
                 triggerElement: this,
                 triggerHook: 0.5
             })
@@ -112,15 +113,16 @@ $(document).ready(function(){
             TweenMax.to($(this).find(".blog__item__img"), 0, {scale: "1"})
         }
 
-        var blogbuttonscene = new ScrollMagic.Scene({
-                triggerElement: ".button",
-                triggerHook: 0.5,
-                duration: $('.button').height()*1.5
-            })
-                .addTo(controller)
-                .setClassToggle('.button', 'button-active')
-                .addIndicators()
-            ;
+        $('.button').each(function() {
+            var blogbuttonscene = new ScrollMagic.Scene({
+                    triggerElement: this,
+                    triggerHook: 0.5,
+                    duration: $('.button').height() * 1.5
+                })
+                    .addTo(controller)
+                    .setClassToggle(this, 'button-active')
+                ;
+        });
 
         // animation for advantages section
         var advantagescene = new ScrollMagic.Scene({

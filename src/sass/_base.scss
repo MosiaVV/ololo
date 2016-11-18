@@ -43,46 +43,6 @@ section {
   padding-bottom: 0;
 }
 
-//.title-icon {
-//  margin: 0 auto;
-//  width: 45px;
-//  height: 13px;
-//  display: block;
-//  position: relative;
-//  &::after {
-//    position: absolute;
-//    top: 50%;
-//    width: 34px;
-//    height: 1px;
-//    background-color: $titleline;
-//    display: block;
-//    content: '';
-//    right: -34px;
-//  }
-//  &::before {
-//    @extend .title-icon::after;
-//    right: 100%;
-//  }
-//}
-//
-//.title::after {
-//  display: block;
-//  content: '';
-//  background-color: $titleline;
-//  width: 9.5px;
-//  height: 9.5px;
-//  transform: rotate(45deg);
-//  position: absolute;
-//  top: calc(100% + 2px);
-//  left: calc(50% + 2px);
-//  z-index: 1;
-//}
-//
-//.title::before {
-//  left: calc(50% - 12px);
-//  @extend .title::after;
-//}
-
 .title--white, .subtitle--white {
   color: $whitetitle;
 }
