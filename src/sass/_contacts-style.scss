@@ -119,9 +119,6 @@ address {
   }
 }
 
-.form {
-}
-
 .form-group {
   width: 100%;
 }
@@ -130,6 +127,18 @@ address {
   width: 100%;
   @include fs;
   padding: 15px;
+  transition: $transition;
+  color: $borderhover;
+  &:focus {
+    border-bottom: 1px solid $borderhover;
+    animation: input_border 2s;
+  }
+}
+
+@keyframes input_border {
+  6% {
+    border: 1px solid $borderhover;
+  }
 }
 
 .form-label {
