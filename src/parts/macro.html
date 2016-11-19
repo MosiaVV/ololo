@@ -1,7 +1,7 @@
 {% macro ResumeStep(item) %}
 <div class="resume__steps__item {{ item.even }}">
     <div class="item_wrap clearfix">
-        <div class="resume__steps__item__description">
+        <div class="resume__steps__item__description" data-aos="fade-right" data-aos-duration="1300">
             <p class="resume__steps__item__description-name b">{{ item.name }}</p>
             <p class="resume__steps__item__description-place b">{{ item.place }}</p>
             <p class="resume__steps__item__description-text">{{ item.text }}</p>
@@ -12,7 +12,7 @@
 {% endmacro %}
 
 {% macro AdvantageItem(item) %}
-<li class="advantages__item">
+<li class="advantages__item" data-aos="fade-right" data-aos-duration="1300">
     <figure class="advantages__item__img"></figure>
     <p class="advantages__item__quantity b {{ "num" + n }}">{{ item.quantity }}</p>
     <p class="advantages__item__name b">{{ item.name }}</p>
