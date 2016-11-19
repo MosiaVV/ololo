@@ -49,6 +49,9 @@
   text-transform: uppercase;
   background-color: transparent;
   transition: $transition;
+  @include respond-to(mobile) {
+    padding: 25px 84px;
+  };
 }
 
 .get_hired__button__link:active {
