@@ -1,21 +1,25 @@
 {
   "name": "webdesign",
   "version": "1.0.0",
-  "description": "",
+  "description": "=========",
   "main": "gulpfile.js",
   "dependencies": {
+    "animate.css": "^3.5.2",
     "gulp": "^3.9.1",
+    "gulp-install": "^0.6.0",
     "gulp-sass": "^2.3.2"
   },
   "devDependencies": {
     "browser-sync": "^2.14.3",
     "css-mqpacker": "^5.0.1",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-connect": "^5.0.0",
     "gulp-csso": "^2.0.0",
     "gulp-data": "^1.2.1",
     "gulp-front-matter": "^1.3.0",
     "gulp-imagemin": "^3.0.3",
+    "gulp-install": "^0.6.0",
     "gulp-nunjucks-html": "^2.0.0",
     "gulp-nunjucks-render": "^2.0.0",
     "gulp-postcss": "^6.2.0",
@@ -32,10 +36,13 @@
     "type": "git",
     "url": "git+https://github.com/MosiaVV/ololo.git"
   },
-  "author": "",
+  "author": "qwer",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MosiaVV/ololo/issues"
   },
-  "homepage": "https://github.com/MosiaVV/ololo#readme"
+  "homepage": "https://github.com/MosiaVV/ololo#readme",
+  "keywords": [
+    "qwe"
+  ]
 }
