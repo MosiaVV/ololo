@@ -19,26 +19,21 @@
   width: 180px;
   height: 180px;
   position: relative;
-  margin-left: 52px;
-  margin-right: 52px;
+  margin-left: 50px;
+  margin-right: 50px;
   margin-bottom: 90px;
-  border-right-style: double; /* Стиль линии */
-  border-right-width: thick; /* Толщина линии */
-  border-bottom-style: double; /* Стиль линии */
-  border-bottom-width: thick; /* Толщина линии */
-  //&:after{
-  //  content: '';
-  //  position: absolute;
-  //  top: 2px;
-  //  left: 2px;
-  //  border: 1px solid red;
-  //  border-radius: 13px;
-  //  transform: rotate(90deg);
-  //  display: inline-block;
-  //  width: 174px;
-  //  height: 174px;
-  //}
+  border-right-style: double; /* ????? ????? */
+  border-right-width: thick; /* ??????? ????? */
+  border-bottom-style: double; /* ????? ????? */
+  border-bottom-width: thick; /* ??????? ????? */
+  transition: top 1s ease-out 0.5s;
+  :hover {
+    //background-color: royalblue;
+  }
+
+
 }
+
 
 .ab_icon {
   display: inline-block;
