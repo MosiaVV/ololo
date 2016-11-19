@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    AOS.init();
     // Progressbar for 08_tutor_page
     var exitStatistic = true;
     var scrolled = window.pageYOffset || document.documentElement.scrollTop;
@@ -211,5 +212,7 @@ $(document).ready(function(){
         // animated top scrolling
         $('body, html').animate({scrollTop: pos});
     });
+
+
 
 });
