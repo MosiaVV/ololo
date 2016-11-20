@@ -193,7 +193,7 @@ $(document).ready(function(){
         $('.works-block-inner').eq($(this).index() + 1).addClass('active');
     });
 
-    $(document).on('click', 'a[href^="#"]', function(e) {
+    $(document).on('click', '.nav-list__link[href^="#"]', function(e) {
         // target element id
         var id = $(this).attr('href');
 
